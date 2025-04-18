@@ -1,0 +1,563 @@
+/* components/EventInfo/EventInfo.css */
+
+.event-info {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #2e8eee2b 0%, #5643cc2b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.event-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 5%
+    ),
+    radial-gradient(
+      circle at 85% 60%,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 5%
+    ),
+    radial-gradient(
+      circle at 40% 80%,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 5%
+    );
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transform: translateY(-50px);
+  margin-top: -50px;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  z-index: 10;
+  margin-top: 30px;
+}
+
+.info-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.info-box:hover {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  transform: translateY(-55px);
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.location-container {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  background: #f8f8f8;
+  border-radius: 14px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  max-width: 350px;
+  width: 100%;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.info-icon {
+  font-size: 2.2rem;
+  color: #e63946;
+  transition: transform 0.4s ease, color 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.info-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(230, 57, 70, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.info-item:hover .info-icon {
+  transform: scale(1.2) rotate(5deg);
+  color: #d62828;
+}
+
+.info-item:hover .info-icon::after {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: rgba(230, 57, 70, 0.2);
+}
+
+.info-item h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.info-item p {
+  margin: 0.4rem 0 0;
+  color: #666;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+.info-item:hover h3 {
+  color: #d62828;
+}
+
+.info-item:hover p {
+  color: #333;
+}
+
+/* Add to Calendar button */
+.add-to-calendar-btn {
+  display: block;
+  margin: -0.5rem auto 2rem;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
+}
+
+.add-to-calendar-btn:hover {
+  background-color: #d62828;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(214, 40, 40, 0.4);
+}
+
+/* Countdown specific styles */
+.countdown-container {
+  background: linear-gradient(135deg, #f8f8f8 0%, #f1f1f1 100%);
+  border-radius: 14px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+
+.countdown-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-title {
+  font-size: 1.4rem;
+  color: #d62828;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.countdown-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #e63946;
+  border-radius: 3px;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-card {
+  background: linear-gradient(135deg, #e63946 0%, #d62828 100%);
+  color: white;
+  border-radius: 8px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(214, 40, 40, 0.3);
+  perspective: 500px;
+  transition: transform 0.5s ease;
+}
+
+.time-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  top: 50%;
+  left: 0;
+}
+
+.time-value {
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.time-label {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.time-separator {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d62828;
+  display: flex;
+  align-items: center;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.flip {
+  animation: flip 0.5s ease;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+
+/* Progress bar */
+.progress-container {
+  margin-top: 1.5rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e63946 0%, #d62828 100%);
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.progress-text {
+  font-size: 0.95rem;
+  color: #d62828;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0.5rem 0 0;
+}
+
+/* Location specific styles */
+.location-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.view-map-btn {
+  margin-top: 0.8rem;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(230, 57, 70, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  font-size: 1rem;
+}
+
+.view-map-btn:hover {
+  background-color: #d62828;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(214, 40, 40, 0.4);
+}
+
+/* Share event section */
+.share-event {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.share-event p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.share-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.share-icon {
+  font-size: 1.1rem;
+}
+
+.share-btn.facebook {
+  background-color: #3b5998;
+}
+
+.share-btn.twitter {
+  background-color: #1da1f2;
+}
+
+.share-btn.whatsapp {
+  background-color: #25d366;
+}
+
+.share-btn.instagram {
+  background-color: #e1306c;
+}
+
+.share-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+<<<<<<< HEAD
+  .info-items-row {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+=======
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
+  .time-card {
+    width: 60px;
+    height: 60px;
+  }
+
+  .time-value {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-info {
+    padding: 3rem 0;
+  }
+
+  .info-box {
+    transform: translateY(-30px);
+    margin-top: -30px;
+    padding: 1.5rem;
+  }
+
+  .info-item {
+    padding: 1.2rem;
+  }
+
+  .countdown-timer {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0.8rem;
+  }
+
+  .time-card {
+    width: 50px;
+    height: 50px;
+  }
+
+  .time-value {
+    font-size: 1.5rem;
+  }
+
+  .time-separator {
+    display: none;
+  }
+
+  .share-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+<<<<<<< HEAD
+  .info-items-row {
+    grid-template-columns: 1fr;
+  }
+
+=======
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
+  .time-card {
+    width: 45px;
+    height: 45px;
+  }
+
+  .time-value {
+    font-size: 1.3rem;
+  }
+
+  .countdown-title {
+    font-size: 1.2rem;
+  }
+
+  .share-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+<<<<<<< HEAD
+
+  .datetime-display {
+    margin-bottom: 1rem;
+  }
+
+  .date-item {
+=======
+  
+  .info-container {
+    margin-bottom: 1rem;
+  }
+  
+  .info-item {
+>>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
+    max-width: 100%;
+  }
+}

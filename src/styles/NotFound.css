@@ -1,0 +1,126 @@
+/* Container setup */
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f9f9f9, #dceeff);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Main content box */
+.not-found-content {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Header logo and title */
+.error-header {
+  margin-bottom: 30px;
+}
+
+.error-logo {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* Premium black styled subtitle */
+.jobizza-text {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 8px;
+  background: linear-gradient(to right, #ffd700, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 8px;
+  background-color: #fff7d6;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 404 Code Style */
+.error-code {
+  font-size: 72px;
+  font-weight: bold;
+  color: #003366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.error-icon {
+  background-color: #0077cc;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  font-size: 36px;
+}
+
+/* Page not found message */
+.error-main h2 {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #333333;
+}
+
+.error-message {
+  color: #666666;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Action buttons */
+.error-actions {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.error-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.error-btn:hover {
+  background-color: #0055aa;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon {
+  font-size: 18px;
+}
+
+/* Footer */
+.error-footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #999999;
+}
