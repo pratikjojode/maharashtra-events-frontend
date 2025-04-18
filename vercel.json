@@ -3,25 +3,7 @@
   "builds": [
     {
       "src": "client/package.json",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/v1/:path*",
-      "dest": "https://maharashtra-events-backend.onrender.com/api/v1/:path*"
-    },
-    {
-      "src": "/admin-login",
-      "dest": "/admin-login"
-    },
-    {
-      "src": "/admin/dashboard",
-      "dest": "/admin/dashboard"
-    },
-    {
-      "src": "/:path*",
-      "dest": "/index.html"
+      "use": "@vercel/static-build"
     }
   ],
   "rewrites": [
