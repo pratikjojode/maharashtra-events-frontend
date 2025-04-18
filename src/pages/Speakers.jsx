@@ -2,27 +2,13 @@ import React, { useState } from 'react';
 import '../styles/Speakers.css';
 import paragImage from '../assets/chief-guest.jpg';
 import chandrakantImage from '../assets/chief-guest-2.jpg';
+import HarshwardhanImage from '../assets/chief-guest-3.jpg';
 import { FaLinkedin, FaQuoteLeft, FaArrowRight } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import Navbar from "../component/Header/Navbar";
 import Footer from "../component/Footer/Footer";
 
 const speakers = [
-  {
-    name: 'Dr. Parag Kalkar',
-    title: 'Pro Vice Chancellor, Savitribai Phule Pune University',
-    image: paragImage,
-    description: 'Dr. Parag Kalkar is a distinguished academic leader serving as the Pro Vice Chancellor at Savitribai Phule Pune University. With over 25 years of experience in higher education, he has been instrumental in driving academic excellence and innovation across the university.',
-    bio: 'Dr. Kalkar holds a Ph.D. in Management Sciences and has published numerous research papers in prestigious international journals. Prior to his current role, he served as the Dean of the Faculty of Management at SPPU. His vision for education combines traditional academic rigor with modern technological advancements.',
-    achievements: [
-      'Recipient of the Maharashtra Academic Excellence Award (2021)',
-      'Led the university\'s digital transformation initiative',
-      'Established international collaborations with 15+ global universities'
-    ],
-    quote: 'Education is not just about degrees; it\'s about empowering students to become thoughtful leaders who can solve real-world problems.',
-    linkedin: 'https://linkedin.com/in/example1',
-    socialType: 'linkedin'
-  },
   {
     name: 'Shri Chandrakant Patil',
     title: 'Minister of Higher and Technical Education, Maharashtra',
@@ -35,9 +21,40 @@ const speakers = [
       'Pioneered the Digital Education Initiative across state universities'
     ],
     quote: 'Our aim is to make Maharashtra a global hub for quality education that produces not just graduates, but future-ready professionals and innovators.',
-    xTwitter: 'https://twitter.com/Cristiano',
+    xTwitter: 'https://x.com/ChDadaPatil',
     socialType: 'x'
+  },
+  {
+    name: 'Harshwardhan Patil',
+    title: 'Former Member of Maharashtra Assembly',
+    image: HarshwardhanImage,
+    description: 'Harshwardhan Patil is a respected political figure who served as a member of the Maharashtra Legislative Assembly. With his extensive experience in public service, he has contributed significantly to educational policies and development initiatives across the state.',
+    bio: 'With years of dedicated service in public administration, Harshwardhan Patil has championed various educational reforms in Maharashtra. His grassroots approach to governance has helped bridge the gap between policy makers and educational institutions, creating lasting impact on the state\'s educational framework.',
+    achievements: [
+      'Spearheaded rural education improvement programs',
+      'Advocated for technology integration in traditional educational systems',
+      'Facilitated public-private partnerships for educational infrastructure development'
+    ],
+    quote: 'True development of a state begins with investing in quality education that reaches every corner and every citizen of our society.',
+    xTwitter: 'https://x.com/Harshvardhanji', 
+    socialType: 'x'
+  },
+  {
+    name: 'Dr. Parag Kalkar',
+    title: 'Pro Vice Chancellor, Savitribai Phule Pune University',
+    image: paragImage,
+    description: 'Dr. Parag Kalkar is a distinguished academic leader serving as the Pro Vice Chancellor at Savitribai Phule Pune University. With over 25 years of experience in higher education, he has been instrumental in driving academic excellence and innovation across the university.',
+    bio: 'Dr. Kalkar holds a Ph.D. in Management Sciences and has published numerous research papers in prestigious international journals. Prior to his current role, he served as the Dean of the Faculty of Management at SPPU. His vision for education combines traditional academic rigor with modern technological advancements.',
+    achievements: [
+      'Recipient of the Maharashtra Academic Excellence Award (2021)',
+      'Led the university\'s digital transformation initiative',
+      'Established international collaborations with 15+ global universities'
+    ],
+    quote: 'Education is not just about degrees; it\'s about empowering students to become thoughtful leaders who can solve real-world problems.',
+    linkedin: 'https://www.linkedin.com/in/dr-parag-kalkar-1b80b924/',
+    socialType: 'linkedin'
   }
+  
 ];
 
 const Speakers = () => {
@@ -79,7 +96,7 @@ const Speakers = () => {
                         href={speaker.xTwitter}
                         target="_blank"
                         rel="noreferrer"
-                        className="Twitter-link" // using same class for styling consistency
+                        className="Twitter-link" 
                         aria-label={`X (Twitter) of ${speaker.name}`}
                       >
                         <FaXTwitter />
@@ -129,9 +146,9 @@ const Speakers = () => {
           </div>
           
           <div className="conference-info">
-            <h3>About MyMaharashtra Educational Awards</h3>
+            <h3>About Maharashtra Educational Awards</h3>
             <p>
-              The MyMaharashtra Educational Awards recognize excellence in education across the state.
+              Maharashtra Educational Awards recognize excellence in education across the state.
               Our distinguished speakers bring valuable insights and vision to this prestigious event,
               celebrating innovation and achievement in Maharashtra's educational landscape.
             </p>

@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/Chief-Guest.css";
 import chiefGuestImage1 from "../../assets/chief-guest.jpg";
 import chiefGuestImage2 from "../../assets/chief-guest-2.jpg";
+import chiefGuestImage3 from "../../assets/chief-guest-3.jpg"; 
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -14,12 +15,20 @@ const guests = [
     xTwitter: "https://x.com/ChDadaPatil",
   },
   {
+    name: "Harshwardhan Patil",
+    title: "Former member of Maharashtra Assembly",
+    image: chiefGuestImage3, 
+    description: `Harshwardhan Patil is a respected political figure who served as a member of the Maharashtra Legislative Assembly. He has contributed significantly to the development of the state through various initiatives.`,
+    xTwitter: "https://x.com/Harshvardhanji", 
+  },
+  {
     name: "Dr. Parag Kalkar",
     title: "Pro Vice Chancellor at Savitribai Phule Pune University",
     image: chiefGuestImage1,
     description: `Dr. Parag Kalkar is Director of Sinhgad Institute of Management... and the role educators play in shaping the nation's destiny.`,
     linkedin: "https://www.linkedin.com/in/dr-parag-kalkar-1b80b924/",
-  },
+  }
+ 
 ];
 
 const ChiefGuest = () => {

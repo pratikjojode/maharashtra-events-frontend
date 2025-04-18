@@ -84,13 +84,13 @@
 /* Guest Card Layout */
 .guest-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
 .guest-card {
-  width: 400px;
+  width: 340px;
   background: var(--light);
   border-radius: 16px;
   overflow: hidden;
@@ -152,6 +152,7 @@
   color: #ffffff;
   transition: color 0.3s ease;
   display: inline-block;
+  margin-right: 0.8rem;
 }
 .linkedin-icon:hover {
   color: #0077b5; /* LinkedIn blue */
@@ -179,6 +180,16 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .guest-container {
+    justify-content: center;
+  }
+  
+  .guest-card {
+    width: 300px;
+  }
+}
+
 @media (max-width: 1024px) {
   .guest-container {
     justify-content: center;

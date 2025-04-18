@@ -28,7 +28,7 @@ const FAQ = () => {
     {
       question: "What are the different award categories?",
       answer:
-        "We have multiple categories including Best Educational Leader, Excellence in Teaching, Innovation in Education, and Community Impact. Each category recognizes different aspects of educational excellence.",
+        "We have multiple categories including Academic Excellence, Innovation in Education, Reasearch Excellence , and Impact and Placements Achievements and Alumni Growth. Each category recognizes different aspects of educational excellence.",
     },
     {
       question: "When and where will the awards ceremony take place?",
@@ -38,7 +38,7 @@ const FAQ = () => {
     {
       question: "Is there a fee to attend the awards ceremony?",
       answer:
-        "Yes, there is a registration fee for attendees. However, nominees in the final selection round receive complimentary invitations. Please check the Tickets section for pricing details.",
+        "No, there is no fee to attend the awards ceremony. All guests, including nominees and attendees, are welcome to join the event free of charge."
     },
     {
       question: "How are the winners selected?",
