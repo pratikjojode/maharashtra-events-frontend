@@ -3,6 +3,14 @@
     {
       "source": "/api/v1/:path*",
       "destination": "https://maharashtra-events-backend.onrender.com/api/v1/:path*"
+    },
+    {
+      "source": "/admin-login",
+      "destination": "/admin-login"
+    },
+    {
+      "source": "/admin/dashboard",
+      "destination": "/admin/dashboard"
     }
   ]
 }
