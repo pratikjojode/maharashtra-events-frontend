@@ -28,6 +28,9 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
         <NavLink to="/admin/dashboard" onClick={closeSidebar}>
           <FaTachometerAlt /> Dashboard
         </NavLink>
+        <NavLink to="/" onClick={closeSidebar}>
+          <FaTachometerAlt /> Home
+        </NavLink>
 
         {/* Logout as a button */}
         <button className="logout-btn" onClick={logout}>
