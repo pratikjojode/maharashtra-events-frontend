@@ -56,13 +56,7 @@ const Navbar = () => {
           >
             Insights
           </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
-            onClick={closeMenu}
-          >
-            Contact Us
-          </NavLink>
+          
         </div>
 
         <button

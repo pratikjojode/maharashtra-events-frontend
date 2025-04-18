@@ -22,12 +22,7 @@ const Jobizza = () => {
                 Icon Awards, Jobizza demonstrates its commitment to recognizing and fostering excellence 
                 in education.
               </p>
-              <p>
-                With a track record of successful educational initiatives and career development programs, 
-                Jobizza has become a trusted name in Maharashtra's education sector. Past events organized 
-                by Jobizza include the Maharashtra Career Fair, EduTech Summit, and the Annual Teachers' 
-                Excellence Conference.
-              </p>
+              
               <a 
                 href="https://www.jobizza.com" 
                 target="_blank" 
@@ -51,11 +46,7 @@ const Jobizza = () => {
                 without monetary transactions. As a co-organizer of the Maharashtra Education Icon Awards, 
                 Anytime Barter brings innovative networking solutions to the education sector.
               </p>
-              <p>
-                Specializing in creating value through exchange systems, Anytime Barter has transformed how 
-                educational institutions collaborate. Their platform enables schools and colleges to exchange 
-                resources, expertise, and services efficiently.
-              </p>
+             
               <a 
                 href="https://anytimebarter.com/" 
                 target="_blank" 
