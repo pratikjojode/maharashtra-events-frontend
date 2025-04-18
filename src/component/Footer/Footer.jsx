@@ -1,7 +1,13 @@
-import React from 'react';
-import './Footer.css';
-import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+import React from "react";
+import "./Footer.css";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaEnvelope,
+} from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,16 +21,28 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#categories">Award Categories</a></li>
-              <li><a href="/sponsors">Sponsors</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#categories">Award Categories</a>
+              </li>
+              <li>
+                <a href="/sponsors">Sponsors</a>
+              </li>
+              <li>
+                <a href="#contact">Contact Us</a>
+              </li>
             </ul>
           </div>
           <div className="footer-section">
             <h3>Contact Info</h3>
             <p>
-              <a href="https://maps.google.com/?q=Sunny's World, Pune" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://maps.google.com/?q=Sunny's World, Pune"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaMapMarkerAlt className="footer-icon" /> Sunny's World, Pune
               </a>
             </p>
@@ -41,16 +59,28 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Maharashtra Education Icon Awards. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Maharashtra Education Icon Awards.
+            All rights reserved.
+          </p>
           <div className="social-links">
-            <span><FaFacebook /></span>
-            <span><FaInstagram /></span>
-            <a href="https://www.linkedin.com/company/jobizza-justice-with-your-innovations/" target="_blank" rel="noopener noreferrer">
+            <span>
+              <FaFacebook />
+            </span>
+            <span>
+              <FaInstagram />
+            </span>
+            <a
+              href="https://www.linkedin.com/company/jobizza-justice-with-your-innovations/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin />
             </a>
             <a href="mailto:gaurav@jobizza.com">
               <FaEnvelope />
             </a>
+            <Link to="/admin-login" />
           </div>
         </div>
       </div>
