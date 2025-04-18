@@ -51,7 +51,6 @@
   transition: all 0.4s ease-in-out;
   position: relative;
   z-index: 10;
-  margin-top: 30px;
 }
 
 .info-box::after {
@@ -462,13 +461,6 @@
 
 /* Responsive styles */
 @media (max-width: 992px) {
-<<<<<<< HEAD
-  .info-items-row {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-
-=======
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
   .time-card {
     width: 60px;
     height: 60px;
@@ -519,13 +511,6 @@
 }
 
 @media (max-width: 480px) {
-<<<<<<< HEAD
-  .info-items-row {
-    grid-template-columns: 1fr;
-  }
-
-=======
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
   .time-card {
     width: 45px;
     height: 45px;
@@ -543,21 +528,12 @@
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
   }
-<<<<<<< HEAD
 
-  .datetime-display {
-    margin-bottom: 1rem;
-  }
-
-  .date-item {
-=======
-  
   .info-container {
     margin-bottom: 1rem;
   }
-  
+
   .info-item {
->>>>>>> b85c92e098a9fb1a160356b9d7e5bb9fbdab7432
     max-width: 100%;
   }
 }
