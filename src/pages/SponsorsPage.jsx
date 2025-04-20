@@ -10,7 +10,7 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
-import "../styles/Sponsors.css";
+import "../styles/SponsorsPage.css";
 import Navbar from "../component/Header/Navbar.jsx";
 import Footer from "../component/Footer/Footer.jsx";
 const SponsorsPage = () => {

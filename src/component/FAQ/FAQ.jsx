@@ -38,7 +38,7 @@ const FAQ = () => {
     {
       question: "Is there a fee to attend the awards ceremony?",
       answer:
-        "No, there is no fee to attend the awards ceremony. All guests, including nominees and attendees, are welcome to join the event free of charge."
+        "No, there is no fee to attend the awards ceremony. All guests, including nominees and attendees, are welcome to join the event free of charge.",
     },
     {
       question: "How are the winners selected?",

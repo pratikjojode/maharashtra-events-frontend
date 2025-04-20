@@ -4,6 +4,7 @@ import { FiLock, FiLogIn, FiAlertCircle } from "react-icons/fi";
 import "../styles/AdminLogin.css";
 import Navbar from "../component/Header/Navbar";
 import Footer from "../component/Footer/Footer";
+import { message } from "antd";
 
 function AdminLogin({ setIsAdmin }) {
   const [secret, setSecret] = useState("");
@@ -14,6 +15,7 @@ function AdminLogin({ setIsAdmin }) {
   useEffect(() => {
     if (localStorage.getItem("isAdmin") === "true") {
       navigate("/admin/dashboard");
+      message.success("Welcome to the admin dashboard");
     }
   }, [navigate]);
 
@@ -26,14 +28,16 @@ function AdminLogin({ setIsAdmin }) {
     try {
       if (secret === import.meta.env.VITE_ADMIN_SECRET) {
         localStorage.setItem("isAdmin", "true");
-        setIsAdmin(true); // trigger re-render in App.jsx
-        navigate("/admin/dashboard"); // redirect to dashboard
+        setIsAdmin(true);
+        navigate("/admin/dashboard");
+        message.success("Welcome to the admin dashboard");
       } else {
         setError("Invalid access credentials");
         setSecret("");
       }
     } finally {
       setIsLoading(false);
+      message.error("Something  went wrong");
     }
   };
 

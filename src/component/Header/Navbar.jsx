@@ -35,13 +35,13 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink
-  to="/speakers"
-  className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
-  onClick={closeMenu}
->
-  Speakers
-</NavLink>  
-          
+            to="/speakers"
+            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+            onClick={closeMenu}
+          >
+            Speakers
+          </NavLink>
+
           <NavLink
             to="/sponsors"
             className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
@@ -49,14 +49,6 @@ const Navbar = () => {
           >
             Sponsors
           </NavLink>
-          <NavLink
-            to="/ourInsights"
-            className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
-            onClick={closeMenu}
-          >
-            Insights
-          </NavLink>
-          
         </div>
 
         <button

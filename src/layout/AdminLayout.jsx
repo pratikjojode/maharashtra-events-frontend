@@ -21,11 +21,12 @@ const AdminLayout = () => {
         <div className="hamburger" onClick={toggleSidebar}>
           <FaBars />
         </div>
-        <div className="header-title">Maharashtra Awards Admin Panel</div>
+        <div className="header-title">
+          Maharashtra Education Awards Admin Panel
+        </div>
         <div className="admin-header-right"></div>
       </header>
 
-      {/* Overlay for small screen when sidebar is open */}
       {isSidebarOpen && <div className="overlay" onClick={closeSidebar}></div>}
 
       {/* Sidebar */}

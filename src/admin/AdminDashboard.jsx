@@ -63,7 +63,7 @@ function AdminDashboard() {
 
   const filteredData = useMemo(() => {
     return responses.filter((row) =>
-      Object.entries(row).some(([val]) =>
+      Object.entries(row).some(([, val]) =>
         String(val).toLowerCase().includes(searchTerm.toLowerCase())
       )
     );

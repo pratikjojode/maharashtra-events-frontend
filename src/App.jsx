@@ -81,7 +81,7 @@ function App() {
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
-          <Route path="/ourInsights" element={<Insights />} />
+
           <Route path="*" element={<NotFound />} />
           <Route path="/sponsors" element={<SponsorsPage />} />
           <Route path="/speakers" element={<Speakers />} />

@@ -2,29 +2,71 @@
 import React from "react";
 import "../../styles/Sponsors.css";
 import { Link } from "react-router-dom";
+import { FaCrown, FaHandshake } from "react-icons/fa";
 
 const Sponsors = () => {
   return (
-    <section className="sponsors home-sponsor-section">
-      <div className="container home-sponsor-container">
-        <div className="section-header home-sponsor-header">
-          <h2 className="home-sponsor-title">Become a Sponsor</h2>
-          <div className="divider home-sponsor-divider"></div>
-          <p className="section-subtitle home-sponsor-subtitle">
+    <section className="sponsors-section">
+      <div className="sponsors-background-pattern"></div>
+      <div className="sponsors-container">
+        <div className="sponsors-header">
+          <div className="crown-icon">
+            <FaCrown />
+          </div>
+          <h2 className="sponsors-title">
+            <span className="title-small">Partner With Excellence</span>
+            Become a Sponsor
+          </h2>
+          <div className="golden-divider">
+            <div className="divider-diamond left"></div>
+            <div className="divider-line"></div>
+            <div className="divider-diamond right"></div>
+          </div>
+          <p className="sponsors-subtitle">
             Join us in celebrating educational excellence and gain visibility
             among Maharashtra's top educators.
           </p>
         </div>
-        <div className="sponsor-cta home-sponsor-cta">
-          <p className="home-sponsor-description">
-            Sponsoring the Maharashtra Education Icon Awards provides your
-            organization with a unique opportunity to align with educational
-            excellence and connect with key decision-makers in Maharashtra's
-            education sector.
-          </p>
-          <Link to="/sponsors" className="btn btn-sponsor home-sponsor-btn">
-            Learn About Sponsorship Benefits
-          </Link>
+
+        <div className="sponsors-content">
+          <div className="sponsors-card">
+            <div className="card-border-glow"></div>
+            <div className="card-inner">
+              <div className="handshake-icon">
+                <FaHandshake />
+              </div>
+              <p className="sponsors-description">
+                Sponsoring the Maharashtra Education Icon Awards provides your
+                organization with a unique opportunity to align with educational
+                excellence and connect with key decision-makers in Maharashtra's
+                education sector.
+              </p>
+              <ul className="benefits-list">
+                <li>
+                  <span className="benefit-dot"></span> Brand visibility among
+                  education leaders
+                </li>
+                <li>
+                  <span className="benefit-dot"></span> Networking with academic
+                  innovators
+                </li>
+                <li>
+                  <span className="benefit-dot"></span> Recognition as an
+                  education supporter
+                </li>
+                <li>
+                  <span className="benefit-dot"></span> Access to exclusive
+                  award ceremonies
+                </li>
+              </ul>
+              <Link to="/sponsors" className="golden-button">
+                <span className="button-text">
+                  Learn About Sponsorship Benefits
+                </span>
+                <span className="button-shine"></span>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>

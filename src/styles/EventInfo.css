@@ -1,237 +1,66 @@
-/* components/EventInfo/EventInfo.css */
+/* EventInfo.css */
 
 .event-info {
-  padding: 4rem 0;
-  background: linear-gradient(135deg, #2e8eee2b 0%, #5643cc2b 100%);
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+  color: #fff;
+  padding: 3rem 0;
+  font-family: "Poppins", sans-serif;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.event-info::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(
-      circle at 10% 20%,
-      rgba(255, 255, 255, 0.3) 0%,
-      transparent 5%
-    ),
-    radial-gradient(
-      circle at 85% 60%,
-      rgba(255, 255, 255, 0.3) 0%,
-      transparent 5%
-    ),
-    radial-gradient(
-      circle at 40% 80%,
-      rgba(255, 255, 255, 0.3) 0%,
-      transparent 5%
-    );
-  pointer-events: none;
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {
-  max-width: 1400px;
+  width: 90%;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
 }
 
 .info-box {
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  transform: translateY(-50px);
-  margin-top: -50px;
-  transition: all 0.4s ease-in-out;
-  position: relative;
-  z-index: 10;
-}
-
-.info-box::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-radius: 16px;
-  z-index: -1;
-}
-
-.info-box:hover {
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-  transform: translateY(-55px);
-}
-
-.info-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.location-container {
-  margin-top: 2rem;
-  margin-bottom: 0;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  padding: 1.5rem;
-  background: #f8f8f8;
-  border-radius: 14px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  max-width: 350px;
-  width: 100%;
-}
-
-.info-content {
-  flex: 1;
-}
-
-.info-item:hover {
-  transform: translateY(-8px) scale(1.02);
-  background: #ffffff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  border-color: rgba(0, 0, 0, 0.08);
-}
-
-.info-icon {
-  font-size: 2.2rem;
-  color: #e63946;
-  transition: transform 0.4s ease, color 0.4s ease;
-  position: relative;
-  z-index: 2;
-}
-
-.info-icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60px;
-  height: 60px;
-  background-color: rgba(230, 57, 70, 0.15);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0.7);
-  z-index: -1;
-  transition: all 0.5s ease;
-}
-
-.info-item:hover .info-icon {
-  transform: scale(1.2) rotate(5deg);
-  color: #d62828;
-}
-
-.info-item:hover .info-icon::after {
-  transform: translate(-50%, -50%) scale(1);
-  background-color: rgba(230, 57, 70, 0.2);
-}
-
-.info-item h3 {
-  margin: 0;
-  color: #333;
-  font-size: 1.3rem;
-  font-weight: 700;
-  transition: color 0.3s ease;
-}
-
-.info-item p {
-  margin: 0.4rem 0 0;
-  color: #666;
-  font-size: 1.05rem;
-  transition: color 0.3s ease;
-}
-
-.info-item:hover h3 {
-  color: #d62828;
-}
-
-.info-item:hover p {
-  color: #333;
-}
-
-/* Add to Calendar button */
-.add-to-calendar-btn {
-  display: block;
-  margin: -0.5rem auto 2rem;
-  background-color: #e63946;
-  color: white;
-  border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.95rem;
-}
-
-.add-to-calendar-btn:hover {
-  background-color: #d62828;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(214, 40, 40, 0.4);
-}
-
-/* Countdown specific styles */
-.countdown-container {
-  background: linear-gradient(135deg, #f8f8f8 0%, #f1f1f1 100%);
-  border-radius: 14px;
+  gap: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   padding: 2rem;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-.countdown-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+/* Countdown Section */
+.countdown-container {
+  text-align: center;
 }
 
 .countdown-title {
-  font-size: 1.4rem;
-  color: #d62828;
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
-  position: relative;
-  display: inline-block;
-}
-
-.countdown-title::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background-color: #e63946;
-  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .countdown-timer {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 }
 
 .time-unit {
@@ -241,64 +70,40 @@
 }
 
 .time-card {
-  background: linear-gradient(135deg, #e63946 0%, #d62828 100%);
-  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
   border-radius: 8px;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-width: 80px;
+  transition: all 0.5s ease;
+  backface-visibility: hidden;
   position: relative;
-  box-shadow: 0 5px 15px rgba(214, 40, 40, 0.3);
-  perspective: 500px;
-  transition: transform 0.5s ease;
-}
-
-.time-card::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.3);
-  top: 50%;
-  left: 0;
+  transform-style: preserve-3d;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .time-value {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: block;
 }
 
 .time-label {
-  margin-top: 0.5rem;
   font-size: 0.9rem;
-  color: #666;
-  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .time-separator {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #d62828;
-  display: flex;
-  align-items: center;
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
+  align-self: flex-start;
+  margin-top: 1rem;
 }
 
 .flip {
-  animation: flip 0.5s ease;
+  animation: flip 0.5s ease forwards;
 }
 
 @keyframes flip {
@@ -313,188 +118,257 @@
   }
 }
 
-/* Progress bar */
+/* Info Containers */
+.info-container {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1.2rem;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.info-icon {
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 0.8rem;
+}
+
+.info-content {
+  flex: 1;
+  text-align: left;
+}
+
+.info-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Progress Bar */
 .progress-container {
-  margin-top: 1.5rem;
+  margin: 2rem 0;
 }
 
 .progress-bar {
-  height: 8px;
-  background-color: #f1f1f1;
-  border-radius: 4px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 0.5rem;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #e63946 0%, #d62828 100%);
-  border-radius: 4px;
-  transition: width 0.5s ease-in-out;
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(90deg, #fdbb2d, #ff4d4d);
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+  animation: pulse 2s infinite;
 }
 
-.progress-fill::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  animation: shine 2s infinite;
-}
-
-@keyframes shine {
+@keyframes pulse {
   0% {
-    transform: translateX(-100%);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
   }
   100% {
-    transform: translateX(100%);
+    opacity: 0.8;
   }
 }
 
 .progress-text {
-  font-size: 0.95rem;
-  color: #d62828;
+  font-size: 1rem;
   font-weight: 600;
+  color: #ffcc29;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin: 0.5rem 0 0;
+  animation: blink 1.5s infinite;
 }
 
-/* Location specific styles */
-.location-item {
-  position: relative;
-  overflow: hidden;
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
+/* Buttons */
+.add-to-calendar-btn,
 .view-map-btn {
-  margin-top: 0.8rem;
-  background-color: #e63946;
-  color: white;
+  background-color: #ffcc29;
+  color: #1a2a6c;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 30px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(230, 57, 70, 0.3);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.btn-icon {
-  font-size: 1rem;
+.add-to-calendar-btn:hover,
+.view-map-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: #ffd54f;
+}
+
+.view-map-btn {
+  background-color: transparent;
+  border: 2px solid #ffcc29;
+  color: #ffcc29;
 }
 
 .view-map-btn:hover {
-  background-color: #d62828;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(214, 40, 40, 0.4);
+  background-color: #ffcc29;
+  color: #1a2a6c;
 }
 
-/* Share event section */
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+/* Share Section */
 .share-event {
-  margin-top: 2rem;
   text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }
 
 .share-event p {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .share-buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
 
 .share-btn {
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: white;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.share-icon {
-  font-size: 1.1rem;
-}
-
-.share-btn.facebook {
-  background-color: #3b5998;
-}
-
-.share-btn.twitter {
-  background-color: #1da1f2;
-}
-
-.share-btn.whatsapp {
-  background-color: #25d366;
-}
-
-.share-btn.instagram {
-  background-color: #e1306c;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .share-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive styles */
-@media (max-width: 992px) {
+.facebook {
+  background-color: #1877f2;
+  color: white;
+}
+
+.twitter {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.whatsapp {
+  background-color: #25d366;
+  color: white;
+}
+
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  color: white;
+}
+
+.share-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .countdown-timer {
+    gap: 0.5rem;
+  }
+
   .time-card {
-    width: 60px;
-    height: 60px;
+    min-width: 60px;
+    padding: 0.8rem;
   }
 
   .time-value {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .event-info {
-    padding: 3rem 0;
+    font-size: 2rem;
   }
 
-  .info-box {
-    transform: translateY(-30px);
-    margin-top: -30px;
-    padding: 1.5rem;
+  .time-separator {
+    font-size: 2rem;
   }
 
   .info-item {
-    padding: 1.2rem;
+    min-width: 100%;
   }
 
-  .countdown-timer {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 0.8rem;
+  .share-buttons {
+    flex-direction: column;
+    align-items: center;
   }
 
+  .share-btn {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
   .time-card {
-    width: 50px;
-    height: 50px;
+    min-width: 50px;
+    padding: 0.6rem;
   }
 
   .time-value {
@@ -502,38 +376,15 @@
   }
 
   .time-separator {
-    display: none;
-  }
-
-  .share-buttons {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 480px) {
-  .time-card {
-    width: 45px;
-    height: 45px;
-  }
-
-  .time-value {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .countdown-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
-  .share-btn {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .info-container {
-    margin-bottom: 1rem;
-  }
-
-  .info-item {
-    max-width: 100%;
+  .info-icon {
+    font-size: 1.5rem;
+    padding: 0.6rem;
   }
 }

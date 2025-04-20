@@ -1,70 +1,69 @@
-// components/Categories/Categories.jsx
 import React from "react";
+import {
+  FaChalkboardTeacher,
+  FaSchool,
+  FaLightbulb,
+  FaHandsHelping,
+} from "react-icons/fa";
 import "../../styles/Categories.css";
-import { FaChalkboardTeacher, FaSchool, FaLightbulb, FaHandsHelping } from 'react-icons/fa';
-
 const Categories = () => {
   const categories = [
     {
       title: "Academic Excellence",
-      description: "Recognizing principals and directors who have demonstrated exceptional leadership in advancing their institution's mission.",
-      icon: <FaChalkboardTeacher className="category-icon" />
+      description:
+        "Recognizing exceptional leadership in institutional advancement",
+      icon: <FaChalkboardTeacher className="category-icon" />,
     },
     {
-      title: " Reasearch Excellence and Impact",
-      description: "Honoring teachers who inspire, engage and transform the learning experience for their students.",
-      icon: <FaSchool className="category-icon" />
+      title: "Research Impact",
+      description: "Honoring transformative teaching methodologies",
+      icon: <FaSchool className="category-icon" />,
     },
     {
-      title: "Innovation in Education",
-      description: "Celebrating groundbreaking approaches and methodologies that are reshaping education.",
-      icon: <FaLightbulb className="category-icon" />
+      title: "Education Innovation",
+      description: "Celebrating groundbreaking educational approaches",
+      icon: <FaLightbulb className="category-icon" />,
     },
     {
-      title: "Placements Achievements and Alumni Growth",
-      description: "Recognizing institutions that have excelled in student placements and alumni success.",
-      
-      icon: <FaHandsHelping className="category-icon" />
-    }
+      title: "Career Success",
+      description: "Acknowledging excellence in placements & alumni growth",
+      icon: <FaHandsHelping className="category-icon" />,
+    },
   ];
 
   return (
-    <section className="categories" id="categories">
-      <div className="container">
-        <div className="section-header">
-          <h2>Award Categories</h2>
-          <div className="divider"></div>
-          <p className="section-subtitle">
-            Explore the diverse categories recognizing excellence across all facets of the educational ecosystem in Maharashtra.
-          </p>
+    <section className="awards-categories-section" id="categories">
+      <div className="premium-container">
+        <div className="luxury-header">
+          <div className="ornamental-line left"></div>
+          <h2 className="prestige-title">
+            <span className="title-accent">Excellence</span>
+            <span>Categories</span>
+          </h2>
+          <div className="ornamental-line right"></div>
         </div>
-        <div className="category-grid">
-          <div className="category-column">
-            {categories.slice(0, 2).map((category, index) => (
-              <div className="category-card" key={index}>
-                <div className="category-icon-container">
-                  {category.icon}
-                </div>
-                <div className="category-content">
-                  <h3>{category.title}</h3>
-                  <p>{category.description}</p>
-                </div>
+
+        <p className="elegant-subtitle">
+          Celebrating Visionary Achievements in Maharashtra's Education
+          Landscape
+        </p>
+
+        <div className="diamond-grid">
+          {categories.map((category, index) => (
+            <div className="crystal-card" key={index}>
+              <div className="shimmer-effect"></div>
+              <div className="icon-container">
+                <div className="glow-orb"></div>
+                {category.icon}
               </div>
-            ))}
-          </div>
-          <div className="category-column">
-            {categories.slice(2, 4).map((category, index) => (
-              <div className="category-card" key={index}>
-                <div className="category-icon-container">
-                  {category.icon}
-                </div>
-                <div className="category-content">
-                  <h3>{category.title}</h3>
-                  <p>{category.description}</p>
-                </div>
+              <div className="card-content">
+                <h3 className="category-title">{category.title}</h3>
+                <div className="title-underline"></div>
+                <p className="category-description">{category.description}</p>
               </div>
-            ))}
-          </div>
+              <div className="hover-shine"></div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

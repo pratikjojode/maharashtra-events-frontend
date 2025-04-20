@@ -1,59 +1,70 @@
-import React from 'react';
-import '../../styles/Jobizza.css';
-import jobizzaLogo from '../../assets/jobizza-logo.png';
-import barterLogo from '../../assets/anytime-barter-logo.png'; // You'll need to add this image
-import { FaArrowRight } from 'react-icons/fa';
+import React from "react";
+import "../../styles/Jobizza.css";
+import jobizzaLogo from "../../assets/jobizza-logo.png";
+import barterLogo from "../../assets/anytime-barter-logo.png";
+import { FaArrowRight } from "react-icons/fa";
 
 const Jobizza = () => {
   return (
-    <section className="jobizza">
-      <div className="container">
-        <div className="companies-grid">
+    <section className="golden-section">
+      <div className="premium-container">
+        <h2 className="premium-title">
+          <span className="gold-text">Prestige Partners</span>
+          <span className="gold-line"></span>
+        </h2>
+
+        <div className="luxury-grid">
           {/* Jobizza Card */}
-          <div className="company-card">
-            <div className="company-logo">
-              <img src={jobizzaLogo} alt="Jobizza" />
+          <div className="gilded-card">
+            <div className="gold-overlay"></div>
+            <div className="medallion-frame">
+              <img
+                src={jobizzaLogo}
+                alt="Jobizza"
+                className="medallion-image"
+              />
             </div>
-            <div className="company-info">
-              <h2>About Jobizza</h2>
-              <p>
-                Jobizza is a leading education and career platform dedicated to connecting talent with 
-                opportunities across Maharashtra. As the principal organizer of the Maharashtra Education 
-                Icon Awards, Jobizza demonstrates its commitment to recognizing and fostering excellence 
-                in education.
+            <div className="card-body">
+              <h3 className="card-heading">
+                Jobizza
+                <span className="gold-underline"></span>
+              </h3>
+              <p className="card-text">
+                Maharashtra's premier career architect, Jobizza orchestrates
+                educational excellence through flagship initiatives like the
+                Maharashtra Education Icon Awards, cultivating academic
+                distinction across the region.
               </p>
-              
-              <a 
-                href="https://www.jobizza.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="company-button"
-              >
-                Learn more <FaArrowRight className="button-icon" />
+              <a href="https://www.jobizza.com" className="gold-button">
+                <span className="button-label">Explore Excellence</span>
+                <FaArrowRight className="gold-arrow" />
               </a>
             </div>
           </div>
 
           {/* Anytime Barter Card */}
-          <div className="company-card">
-            <div className="company-logo">
-              <img src={barterLogo} alt="Anytime Barter" />
+          <div className="gilded-card">
+            <div className="gold-overlay"></div>
+            <div className="medallion-frame">
+              <img
+                src={barterLogo}
+                alt="Anytime Barter"
+                className="medallion-image"
+              />
             </div>
-            <div className="company-info">
-              <h2>About Anytime Barter</h2>
-              <p>
-                Anytime Barter is a revolutionary platform that facilitates trade and exchange of services 
-                without monetary transactions. As a co-organizer of the Maharashtra Education Icon Awards, 
-                Anytime Barter brings innovative networking solutions to the education sector.
+            <div className="card-body">
+              <h3 className="card-heading">
+                Anytime Barter
+                <span className="gold-underline"></span>
+              </h3>
+              <p className="card-text">
+                Revolutionizing value exchange through innovative networking
+                solutions, Anytime Barter redefines collaborative economics in
+                education, co-curating prestigious industry events.
               </p>
-             
-              <a 
-                href="https://anytimebarter.com/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="company-button"
-              >
-                Learn more <FaArrowRight className="button-icon" />
+              <a href="https://anytimebarter.com/" className="gold-button">
+                <span className="button-label">Discover Innovation</span>
+                <FaArrowRight className="gold-arrow" />
               </a>
             </div>
           </div>
