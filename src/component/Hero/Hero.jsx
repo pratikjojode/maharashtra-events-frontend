@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "antd";
 import "../../styles/Hero.css";
 import heroBg1 from "../../assets/hero-bgg3.jpg";
@@ -9,6 +9,31 @@ import { FaAward } from "react-icons/fa";
 
 const Hero = () => {
   const heroImages = [heroBg1, heroBg2];
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [initialFlipDone, setInitialFlipDone] = useState(false);
+
+  // Auto-flip the card after component mounts with a 2-second delay
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsFlipped(true);
+      setInitialFlipDone(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleMouseEnter = () => {
+    // Only allow manual flipping after initial auto-flip
+    if (initialFlipDone) {
+      setIsFlipped(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    // Only allow manual flipping after initial auto-flip
+    if (initialFlipDone) {
+      setIsFlipped(false);
+    }
+  };
 
   return (
     <section className="hero">
@@ -48,14 +73,42 @@ const Hero = () => {
         </div>
 
         <div className="award-title">
-          <FaAward className="award-icon" />
+          <FaAward className="award-icon gold-accent" />
           <h1>
             <span className="title-line-1">Maharashtra Education</span>
-            <span className="title-line-2">Icon Awards</span>
+            <span className="title-line-2 gold-accent">Icon Awards</span>
           </h1>
         </div>
 
         <p className="hero-subtitle">Celebrating Excellence in Education</p>
+
+        <div className="flip-card-container">
+          <div 
+            className={`flip-card ${isFlipped ? "flipped" : ""}`} 
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <div className="card-content">
+                  <FaAward className="card-icon gold-accent" />
+                  <h3 className="gold-accent">Our Motive</h3>
+                  <p>Hover to discover our mission</p>
+                </div>
+              </div>
+              <div className="flip-card-back">
+                <div className="card-content">
+                  <h3 className="gold-accent">Excellence in Education</h3>
+                  <p>
+                    The Maharashtra Education Icon Awards aims to recognize and celebrate
+                    outstanding contributions to education across the state, fostering innovation,
+                    research excellence, and academic leadership that shapes our future generations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div className="hero-buttons">
           <a
