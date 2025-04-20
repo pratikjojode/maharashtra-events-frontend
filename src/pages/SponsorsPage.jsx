@@ -9,10 +9,18 @@ import {
   FaMapMarkerAlt,
   FaChevronDown,
   FaChevronUp,
+  FaAward,
+  FaStar,
+  FaTable,
+  FaUsers,
+  FaVideo,
+  FaImage,
+  FaBookOpen
 } from "react-icons/fa";
 import "../styles/SponsorsPage.css";
 import Navbar from "../component/Header/Navbar.jsx";
 import Footer from "../component/Footer/Footer.jsx";
+
 const SponsorsPage = () => {
   const [showContactOptions, setShowContactOptions] = useState(false);
   const [activeTab, setActiveTab] = useState("email");
@@ -36,204 +44,237 @@ const SponsorsPage = () => {
       <div className="sponsors-page">
         <div className="container">
           <div className="section-header">
+            <span className="pre-title">PARTNER WITH EXCELLENCE</span>
             <h2>Sponsorship Opportunities</h2>
-            <div className="divider"></div>
+            <div className="header-divider"></div>
             <p className="section-subtitle">
-              Partner with us to celebrate educational excellence in Maharashtra
+              Join us in celebrating educational excellence and gain unparalleled visibility among
+              Maharashtra's elite educators and educational institutions
             </p>
           </div>
 
-          <div className="sponsorship-tiers">
-            <h3 className="tier-header">Main Sponsorship Tiers</h3>
-            <div className="sponsorship-table-container">
-              <table className="sponsorship-table">
-                <thead>
-                  <tr>
-                    <th>Category</th>
-                    <th>Logo</th>
-                    <th>Video</th>
-                    <th>Stall</th>
-                    <th>Delegates</th>
-                    <th>Standees</th>
-                    <th>Souvenir Ad</th>
-                    <th>Investment</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="platinum-tier">
-                    <td>Platinum</td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>8</td>
-                    <td>01</td>
-                    <td>Full Page Color (inside)</td>
-                    <td className="investment-cell">
-                      <FaRupeeSign className="rupee-icon" /> 20 Lakhs
-                    </td>
-                  </tr>
-                  <tr className="gold-tier">
-                    <td>Gold</td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>6</td>
-                    <td>01</td>
-                    <td>Full Page Color (inside)</td>
-                    <td className="investment-cell">
-                      <FaRupeeSign className="rupee-icon" /> 15 Lakhs
-                    </td>
-                  </tr>
-                  <tr className="silver-tier">
-                    <td>Silver</td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>5</td>
-                    <td>01</td>
-                    <td>Full Page Color (inside)</td>
-                    <td className="investment-cell">
-                      <FaRupeeSign className="rupee-icon" /> 10 Lakhs
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Academic Partner</td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>
-                      <FaTimes className="icon-times" />
-                    </td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>4</td>
-                    <td>01</td>
-                    <td>Full Page B/W</td>
-                    <td className="investment-cell">
-                      <FaRupeeSign className="rupee-icon" /> 7 Lakhs
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kit Sponsor</td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>
-                      <FaTimes className="icon-times" />
-                    </td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>0</td>
-                    <td>01</td>
-                    <td>Full Page B/W</td>
-                    <td className="investment-cell">
-                      <FaRupeeSign className="rupee-icon" /> 5 Lakhs
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Associate Sponsor</td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>
-                      <FaTimes className="icon-times" />
-                    </td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>0</td>
-                    <td>01</td>
-                    <td>Full Page B/W</td>
-                    <td className="investment-cell">
-                      <FaRupeeSign className="rupee-icon" /> 3 Lakhs
-                    </td>
-                  </tr>
-                  <tr className="dinner-tier">
-                    <td>Dinner Sponsor</td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>
-                      <FaTimes className="icon-times" />
-                    </td>
-                    <td>
-                      <FaCheck className="icon-check" />
-                    </td>
-                    <td>0</td>
-                    <td>01</td>
-                    <td>Full Page Color (inside)</td>
-                    <td className="investment-cell">
-                      <FaRupeeSign className="rupee-icon" /> 20 Lakhs
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+          <div className="sponsorship-cards">
+            <h3 className="tier-header">
+              <span className="tier-text">Premium</span> Sponsorship Tiers
+            </h3>
+            <div className="sponsorship-grid">
+              {/* Platinum Tier */}
+              <div className="sponsorship-card platinum-card">
+                <div className="card-badge">Most Visibility</div>
+                <div className="card-header">
+                  <div className="tier-icon-wrapper">
+                    <FaStar className="tier-icon" />
+                  </div>
+                  <h4>Platinum</h4>
+                  <div className="investment">
+                    <FaRupeeSign /> <span className="amount">20 Lakhs</span>
+                  </div>
+                </div>
+                <div className="card-body">
+                  <ul className="benefits-list">
+                    <li><span className="benefit-icon"><FaImage /></span>Premium Logo Placement</li>
+                    <li><span className="benefit-icon"><FaVideo /></span>Exclusive Video Presentation</li>
+                    <li><span className="benefit-icon"><FaTable /></span>Premium Exhibition Stall</li>
+                    <li><span className="benefit-icon"><FaUsers /></span>8 VIP Delegates Access</li>
+                    <li><span className="benefit-icon"><FaImage /></span>01 Custom Branded Standee</li>
+                    <li><span className="benefit-icon"><FaBookOpen /></span>Full Page Color Ad (Prime Position)</li>
+                  </ul>
+                </div>
+                <div className="card-footer">
+                  <button className="btn-view-details">View Details</button>
+                </div>
+              </div>
+
+              {/* Gold Tier */}
+              <div className="sponsorship-card gold-card">
+                <div className="card-header">
+                  <div className="tier-icon-wrapper">
+                    <FaStar className="tier-icon" />
+                  </div>
+                  <h4>Gold</h4>
+                  <div className="investment">
+                    <FaRupeeSign /> <span className="amount">15 Lakhs</span>
+                  </div>
+                </div>
+                <div className="card-body">
+                  <ul className="benefits-list">
+                    <li><span className="benefit-icon"><FaImage /></span>Featured Logo Placement</li>
+                    <li><span className="benefit-icon"><FaVideo /></span>Extended Video Placement</li>
+                    <li><span className="benefit-icon"><FaTable /></span>Featured Exhibition Stall</li>
+                    <li><span className="benefit-icon"><FaUsers /></span>6 Distinguished Delegates</li>
+                    <li><span className="benefit-icon"><FaImage /></span>01 Branded Standee</li>
+                    <li><span className="benefit-icon"><FaBookOpen /></span>Full Page Color Ad (Inside)</li>
+                  </ul>
+                </div>
+                <div className="card-footer">
+                  <button className="btn-view-details">View Details</button>
+                </div>
+              </div>
+
+              {/* Silver Tier */}
+              <div className="sponsorship-card silver-card">
+                <div className="card-header">
+                  <div className="tier-icon-wrapper">
+                    <FaStar className="tier-icon" />
+                  </div>
+                  <h4>Silver</h4>
+                  <div className="investment">
+                    <FaRupeeSign /> <span className="amount">10 Lakhs</span>
+                  </div>
+                </div>
+                <div className="card-body">
+                  <ul className="benefits-list">
+                    <li><span className="benefit-icon"><FaImage /></span>Prominent Logo Placement</li>
+                    <li><span className="benefit-icon"><FaVideo /></span>Standard Video Placement</li>
+                    <li><span className="benefit-icon"><FaTable /></span>Standard Exhibition Stall</li>
+                    <li><span className="benefit-icon"><FaUsers /></span>5 Delegate Passes</li>
+                    <li><span className="benefit-icon"><FaImage /></span>01 Branded Standee</li>
+                    <li><span className="benefit-icon"><FaBookOpen /></span>Full Page Color Ad (Inside)</li>
+                  </ul>
+                </div>
+                <div className="card-footer">
+                  <button className="btn-view-details">View Details</button>
+                </div>
+              </div>
+
+              {/* Academic Partner */}
+              <div className="sponsorship-card bronze-card">
+                <div className="card-header">
+                  <div className="tier-icon-wrapper">
+                    <FaAward className="tier-icon" />
+                  </div>
+                  <h4>Academic Partner</h4>
+                  <div className="investment">
+                    <FaRupeeSign /> <span className="amount">7 Lakhs</span>
+                  </div>
+                </div>
+                <div className="card-body">
+                  <ul className="benefits-list">
+                    <li><span className="benefit-icon"><FaImage /></span>Strategic Logo Placement</li>
+                    <li><span className="benefit-icon"><FaVideo /></span>No Video Showcase</li>
+                    <li><span className="benefit-icon"><FaTable /></span>Dedicated Exhibition Stall</li>
+                    <li><span className="benefit-icon"><FaUsers /></span>4 Delegate Passes</li>
+                    <li><span className="benefit-icon"><FaImage /></span>01 Branded Standee</li>
+                    <li><span className="benefit-icon"><FaBookOpen /></span>Full Page B/W Advertisement</li>
+                  </ul>
+                </div>
+                <div className="card-footer">
+                  <button className="btn-view-details">View Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div className="additional-tiers">
+              <h3 className="tier-header">
+                <span className="tier-text">Specialized</span> Sponsorships
+              </h3>
+              <div className="sponsorship-grid secondary-grid">
+                {/* Kit Sponsor */}
+                <div className="sponsorship-card secondary-card">
+                  <div className="card-header">
+                    <h4>Kit Sponsor</h4>
+                    <div className="investment">
+                      <FaRupeeSign /> <span className="amount">5 Lakhs</span>
+                    </div>
+                  </div>
+                  <div className="card-body">
+                    <ul className="benefits-list compact">
+                      <li><FaCheck className="icon-check" /> Branded Logo Placement</li>
+                      <li><FaTimes className="icon-times" /> No Video Showcase</li>
+                      <li><FaCheck className="icon-check" /> Compact Exhibition Stall</li>
+                      <li>No Delegate Passes</li>
+                      <li>01 Branded Standee</li>
+                      <li>Full Page B/W Advertisement</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                {/* Associate Sponsor */}
+                <div className="sponsorship-card secondary-card">
+                  <div className="card-header">
+                    <h4>Associate Sponsor</h4>
+                    <div className="investment">
+                      <FaRupeeSign /> <span className="amount">3 Lakhs</span>
+                    </div>
+                  </div>
+                  <div className="card-body">
+                    <ul className="benefits-list compact">
+                      <li><FaCheck className="icon-check" /> Standard Logo Placement</li>
+                      <li><FaTimes className="icon-times" /> No Video Showcase</li>
+                      <li><FaCheck className="icon-check" /> Standard Exhibition Stall</li>
+                      <li>No Delegate Passes</li>
+                      <li>01 Branded Standee</li>
+                      <li>Full Page B/W Advertisement</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                {/* Dinner Sponsor */}
+                <div className="sponsorship-card secondary-card dinner-card">
+                  <div className="card-header">
+                    <h4>Dinner Sponsor</h4>
+                    <div className="investment">
+                      <FaRupeeSign /> <span className="amount">20 Lakhs</span>
+                    </div>
+                  </div>
+                  <div className="card-body">
+                    <ul className="benefits-list compact">
+                      <li><FaCheck className="icon-check" /> Exclusive Dinner Branding</li>
+                      <li><FaTimes className="icon-times" /> No Video Showcase</li>
+                      <li><FaCheck className="icon-check" /> Premium Exhibition Stall</li>
+                      <li>Special Dinner Recognition</li>
+                      <li>01 Premium Standee</li>
+                      <li>Full Page Color Ad (Inside)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="other-sponsorships">
               <h3>
-                Other Sponsorships (<FaRupeeSign className="rupee-icon" /> 2
-                Lakhs Each)
+                <span className="category-text">Category</span> Sponsorships
+                <span className="price-tag"><FaRupeeSign className="rupee-icon" /> 2 Lakhs Each</span>
               </h3>
               <div className="sponsor-categories">
                 <div className="category-card">
                   <div className="category-content">
-                    <h4>Travel Partner Sponsorship</h4>
+                    <h4>Travel Partner</h4>
                   </div>
                 </div>
                 <div className="category-card">
                   <div className="category-content">
-                    <h4>Transport Partner Sponsorship</h4>
+                    <h4>Transport Partner</h4>
                   </div>
                 </div>
                 <div className="category-card">
                   <div className="category-content">
-                    <h4>Corporate Uniform Partner Sponsorship</h4>
+                    <h4>Corporate Uniform Partner</h4>
                   </div>
                 </div>
                 <div className="category-card">
                   <div className="category-content">
-                    <h4>Recruitment Partner Sponsorship</h4>
+                    <h4>Recruitment Partner</h4>
                   </div>
                 </div>
                 <div className="category-card">
                   <div className="category-content">
-                    <h4>Facility & Housekeeping Partner Sponsorship</h4>
+                    <h4>Facility & Housekeeping Partner</h4>
                   </div>
                 </div>
                 <div className="category-card">
                   <div className="category-content">
-                    <h4>F & B Partner Sponsorship</h4>
+                    <h4>F & B Partner</h4>
                   </div>
                 </div>
                 <div className="category-card">
                   <div className="category-content">
-                    <h4>Media Partner Sponsorship</h4>
+                    <h4>Media Partner</h4>
                   </div>
                 </div>
                 <div className="category-card">
                   <div className="category-content">
-                    <h4>Stationery Partner Sponsorship</h4>
+                    <h4>Stationery Partner</h4>
                   </div>
                 </div>
               </div>
@@ -242,7 +283,9 @@ const SponsorsPage = () => {
 
           <div className="event-location">
             <div className="location-card">
-              <FaMapMarkerAlt className="location-icon" />
+              <div className="location-icon-wrapper">
+                <FaMapMarkerAlt className="location-icon" />
+              </div>
               <h3>Event Location</h3>
               <p>Sunny's World, Pune</p>
             </div>
@@ -250,7 +293,7 @@ const SponsorsPage = () => {
 
           <div className="contact-actions">
             <button onClick={handleSponsorClick} className="btn btn-sponsor">
-              Become a Sponsor
+              <span className="btn-text">Become a Sponsor Today</span>
               {showContactOptions ? (
                 <FaChevronUp className="chevron-icon" />
               ) : (
@@ -260,29 +303,31 @@ const SponsorsPage = () => {
 
             {showContactOptions && (
               <div className="contact-options">
-                <div
-                  className={`contact-tab ${
-                    activeTab === "email" ? "active" : ""
-                  }`}
-                  onClick={() => setActiveTab("email")}
-                >
-                  <FaEnvelope className="contact-tab-icon" />
-                  <span>Email</span>
-                </div>
-                <div
-                  className={`contact-tab ${
-                    activeTab === "phone" ? "active" : ""
-                  }`}
-                  onClick={() => setActiveTab("phone")}
-                >
-                  <FaPhone className="contact-tab-icon" />
-                  <span>Phone</span>
+                <div className="contact-tabs">
+                  <div
+                    className={`contact-tab ${
+                      activeTab === "email" ? "active" : ""
+                    }`}
+                    onClick={() => setActiveTab("email")}
+                  >
+                    <FaEnvelope className="contact-tab-icon" />
+                    <span>Email Us</span>
+                  </div>
+                  <div
+                    className={`contact-tab ${
+                      activeTab === "phone" ? "active" : ""
+                    }`}
+                    onClick={() => setActiveTab("phone")}
+                  >
+                    <FaPhone className="contact-tab-icon" />
+                    <span>Call Us</span>
+                  </div>
                 </div>
 
                 <div className="contact-content">
                   {activeTab === "email" ? (
                     <div className="email-content">
-                      <p>Send us an email for sponsorship inquiries</p>
+                      <p>Reach out to us with your sponsorship inquiries and secure your spot today!</p>
                       <button
                         onClick={handleEmailClick}
                         className="btn btn-contact"
@@ -292,7 +337,7 @@ const SponsorsPage = () => {
                     </div>
                   ) : (
                     <div className="phone-content">
-                      <p>Call us directly for immediate assistance</p>
+                      <p>Speak directly with our sponsorship team for personalized assistance</p>
                       <button
                         onClick={handlePhoneClick}
                         className="btn btn-contact"

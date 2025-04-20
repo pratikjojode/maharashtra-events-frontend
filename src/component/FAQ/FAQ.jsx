@@ -28,7 +28,7 @@ const FAQ = () => {
     {
       question: "What are the different award categories?",
       answer:
-        "We have multiple categories including Academic Excellence, Innovation in Education, Reasearch Excellence , and Impact and Placements Achievements and Alumni Growth. Each category recognizes different aspects of educational excellence.",
+        "We have multiple categories including Academic Excellence, Innovation in Education, Research Impact, and Career Success. Each category recognizes different aspects of educational excellence.",
     },
     {
       question: "When and where will the awards ceremony take place?",

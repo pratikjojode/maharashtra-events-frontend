@@ -1,6 +1,7 @@
 /* EventInfo.css */
 
 .event-info {
+  /* Original gradient and animation preserved */
   background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
@@ -11,6 +12,14 @@
   margin: 2rem auto;
   max-width: 1200px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  /* Adding parent div with navy background color */
+  position: relative;
+  z-index: 1;
+}
+
+/* Add a pseudo-element for the navy background behind the gradient component */
+body {
+  background-color: #0f1129; /* Dark navy background to match Images 2 and 3 */
 }
 
 @keyframes gradient-shift {

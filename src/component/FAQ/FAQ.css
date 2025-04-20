@@ -1,15 +1,15 @@
 .faq-section {
-  background: #fdfdfd;
+  background: linear-gradient(135deg, #111125 0%, #1a1a30 100%);
   padding: 80px 20px;
   font-family: "Poppins", sans-serif;
-  color: #333;
+  color: #fff; /* Light text for dark background */
 }
 
 .section-title-faq {
   font-size: 2.8rem;
   text-align: center;
   margin-bottom: 12px;
-  color: #1e1e1e;
+  color: #fff;
   font-weight: 700;
   position: relative;
 }
@@ -18,7 +18,7 @@
   content: "";
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, #d4af37, #b8860b);
+  background: linear-gradient(90deg, #d4af37, #b8860b); /* Gold gradient for underline */
   display: block;
   margin: 12px auto 0;
   border-radius: 5px;
@@ -27,7 +27,7 @@
 .section-subtitle {
   text-align: center;
   font-size: 1.2rem;
-  color: #666;
+  color: #bbb; /* Lighter gray for subtitle */
   margin-bottom: 50px;
 }
 
@@ -37,12 +37,12 @@
 }
 
 .faq-item {
-  border: 1px solid #e6e6e6;
+  border: 1px solid #1a1a30; /* Darker border color */
   border-radius: 16px;
   margin-bottom: 20px;
   overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.08);
+  background: #1a1a30; /* Slightly lighter than background for contrast */
+  box-shadow: 0 10px 30px #1a1a30;
   transition: transform 0.3s ease;
 }
 
@@ -59,22 +59,23 @@
   transition: all 0.3s ease;
   font-size: 1.1rem;
   font-weight: 600;
-  background-color: #fff;
+  background-color: #13213f;
   border-left: 5px solid transparent;
+  color: #fff; /* Light text */
 }
 
 .faq-question.active {
-  border-left: 5px solid #d4af37;
-  background: #fdf8ef;
+  border-left: 5px solid #d4af37; /* Gold accent for active question */
+  background: #1e2d4d; /* Slightly lighter background for active state */
 }
 
 .faq-question h3 {
   margin: 0;
-  color: #222;
+  color: #fff;
 }
 
 .faq-question svg {
-  color: #d4af37;
+  color: #d4af37; /* Gold icon color */
   transition: transform 0.3s ease;
 }
 
@@ -87,8 +88,8 @@
   overflow: hidden;
   transition: all 0.4s ease;
   padding: 0 24px;
-  background: #fff;
-  color: #444;
+  background: #13213f;
+  color: #bbb; /* Lighter gray for answer text */
   font-size: 1rem;
 }
 

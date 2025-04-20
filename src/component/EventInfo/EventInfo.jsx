@@ -1,29 +1,27 @@
 // src/components/EventInfo.jsx
 import React, { useEffect, useState } from "react";
-
 import {
   FaCalendarAlt,
   FaMapMarkerAlt,
-  FaClock,
   FaFacebookF,
   FaTwitter,
   FaWhatsapp,
   FaMapMarkedAlt,
   FaInstagram,
 } from "react-icons/fa";
-import "../../styles/EventInfo.css"; // Adjust the path as necessary
+import "../../styles/EventInfo.css";
 
 const EventInfo = () => {
-  const eventDate = new Date("2025-06-07T18:30:00"); // Set your event date and time
+  const eventDate = new Date("2025-06-07T18:30:00");
   const [timeLeft, setTimeLeft] = useState({});
   const [animate, setAnimate] = useState(false);
 
-  // Event details for sharing
+  // Event details
   const eventName = "Event at Sunny's World";
   const eventLocation = "Sunny's World, Pune";
   const eventDescription = "Join us for an amazing event!";
-  const eventLatLng = "18.5204,73.8567"; // Example coordinates for Pune
-  const instagramPage = "https://www.instagram.com/yourusername"; // Replace with your Instagram URL
+  const eventLatLng = "18.5204,73.8567";
+  const instagramPage = "https://www.instagram.com/yourusername";
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -40,7 +38,6 @@ const EventInfo = () => {
           minutes: Math.floor((diff / (1000 * 60)) % 60),
           seconds: Math.floor((diff / 1000) % 60),
         });
-        // Trigger animation when seconds change
         setAnimate(true);
         setTimeout(() => setAnimate(false), 500);
       }
@@ -49,64 +46,42 @@ const EventInfo = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const formatTimeUnit = (value) => {
-    return value < 10 ? `0${value}` : value;
-  };
+  const formatTimeUnit = (value) => value < 10 ? `0${value}` : value;
 
-  // Calculate percentage of time passed (for progress bar)
   const calculateProgress = () => {
-    const totalDuration = eventDate - new Date("2025-01-01T00:00:00"); // From start of promotion
+    const totalDuration = eventDate - new Date("2025-01-01T00:00:00");
     const elapsed = new Date() - new Date("2025-01-01T00:00:00");
-    const percentage = (elapsed / totalDuration) * 100;
-    return Math.min(percentage, 100);
+    return Math.min((elapsed / totalDuration) * 100, 100);
   };
 
-  // Social sharing functions
-  const shareOnFacebook = () => {
-    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-      window.location.href
-    )}&quote=${encodeURIComponent(eventDescription)}`;
-    window.open(url, "_blank", "width=600,height=400");
-  };
+  // Sharing functions remain exactly the same
+  const shareOnFacebook = () => window.open(
+    `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(eventDescription)}`,
+    "_blank", "width=600,height=400"
+  );
 
-  const shareOnTwitter = () => {
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-      eventName
-    )}&url=${encodeURIComponent(window.location.href)}`;
-    window.open(url, "_blank", "width=600,height=400");
-  };
+  const shareOnTwitter = () => window.open(
+    `https://twitter.com/intent/tweet?text=${encodeURIComponent(eventName)}&url=${encodeURIComponent(window.location.href)}`,
+    "_blank", "width=600,height=400"
+  );
 
-  const shareOnWhatsapp = () => {
-    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-      eventName + " - " + eventDescription + " " + window.location.href
-    )}`;
-    window.open(url, "_blank");
-  };
+  const shareOnWhatsapp = () => window.open(
+    `https://api.whatsapp.com/send?text=${encodeURIComponent(eventName + " - " + eventDescription + " " + window.location.href)}`,
+    "_blank"
+  );
 
-  const openInstagram = () => {
-    window.open(instagramPage, "_blank");
-  };
+  const openInstagram = () => window.open(instagramPage, "_blank");
+  const openInMaps = () => window.open(`https://www.google.com/maps?q=${eventLatLng}`, "_blank");
 
-  // Open location in Google Maps
-  const openInMaps = () => {
-    const url = `https://www.google.com/maps?q=${eventLatLng}`;
-    window.open(url, "_blank");
-  };
-
-  // Add to Google Calendar
   const addToCalendar = () => {
     const startDate = eventDate.toISOString().replace(/-|:|\.\d+/g, "");
-    const endDate = new Date(eventDate.getTime() + 3 * 60 * 60 * 1000) // Assuming 3 hour event
+    const endDate = new Date(eventDate.getTime() + 3 * 60 * 60 * 1000)
       .toISOString()
       .replace(/-|:|\.\d+/g, "");
-
-    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-      eventName
-    )}&dates=${startDate}/${endDate}&details=${encodeURIComponent(
-      eventDescription
-    )}&location=${encodeURIComponent(eventLocation)}`;
-
-    window.open(url, "_blank");
+    window.open(
+      `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventName)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(eventLocation)}`,
+      "_blank"
+    );
   };
 
   return (
@@ -133,9 +108,7 @@ const EventInfo = () => {
             <div className="countdown-timer">
               <div className="time-unit">
                 <div className={`time-card ${animate ? "flip" : ""}`}>
-                  <span className="time-value">
-                    {formatTimeUnit(timeLeft.days || 0)}
-                  </span>
+                  <span className="time-value">{formatTimeUnit(timeLeft.days || 0)}</span>
                 </div>
                 <span className="time-label">Days</span>
               </div>
@@ -143,9 +116,7 @@ const EventInfo = () => {
 
               <div className="time-unit">
                 <div className={`time-card ${animate ? "flip" : ""}`}>
-                  <span className="time-value">
-                    {formatTimeUnit(timeLeft.hours || 0)}
-                  </span>
+                  <span className="time-value">{formatTimeUnit(timeLeft.hours || 0)}</span>
                 </div>
                 <span className="time-label">Hours</span>
               </div>
@@ -153,9 +124,7 @@ const EventInfo = () => {
 
               <div className="time-unit">
                 <div className={`time-card ${animate ? "flip" : ""}`}>
-                  <span className="time-value">
-                    {formatTimeUnit(timeLeft.minutes || 0)}
-                  </span>
+                  <span className="time-value">{formatTimeUnit(timeLeft.minutes || 0)}</span>
                 </div>
                 <span className="time-label">Minutes</span>
               </div>
@@ -163,9 +132,7 @@ const EventInfo = () => {
 
               <div className="time-unit">
                 <div className={`time-card ${animate ? "flip" : ""}`}>
-                  <span className="time-value">
-                    {formatTimeUnit(timeLeft.seconds || 0)}
-                  </span>
+                  <span className="time-value">{formatTimeUnit(timeLeft.seconds || 0)}</span>
                 </div>
                 <span className="time-label">Seconds</span>
               </div>
@@ -173,14 +140,9 @@ const EventInfo = () => {
 
             <div className="progress-container">
               <div className="progress-bar">
-                <div
-                  className="progress-fill"
-                  style={{ width: `${calculateProgress()}%` }}
-                ></div>
+                <div className="progress-fill" style={{ width: `${calculateProgress()}%` }}></div>
               </div>
-              <p className="progress-text">
-                TIME IS RUNNING OUT! RESERVE YOUR SPOT NOW
-              </p>
+              <p className="progress-text">TIME IS RUNNING OUT! RESERVE YOUR SPOT NOW</p>
             </div>
           </div>
 
