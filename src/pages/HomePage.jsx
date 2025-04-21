@@ -9,21 +9,22 @@ import Categories from "../component/Categories/Categories";
 import Jobizza from "../component/Jobizza/Jobizza";
 import Footer from "../component/Footer/Footer";
 import Navbar from "../component/Header/Navbar";
-import FAQ from "../component/FAQ/FAQ";
 import "../index.css";
 import "../App.css";
+
+import PreviousYearJobizzaa from "../component/PreviousYear/PreviousYearJobizzaa";
 const Home = () => {
   const animationRef = useRef(null);
 
   useEffect(() => {
     const smoothScrollToTop = () => {
       const startPosition = window.scrollY;
-      const duration = 1200; // Increased duration for smoother effect (milliseconds)
+      const duration = 1200;
       const startTime = performance.now();
 
       // Ultra-smooth easing function
       const easeOutSoft = (t) => {
-        return 1 - Math.pow(1 - t, 3); // Cubic easing for smoother deceleration
+        return 1 - Math.pow(1 - t, 3);
       };
 
       const animateScroll = (currentTime) => {
@@ -33,7 +34,7 @@ const Home = () => {
 
         window.scrollTo({
           top: startPosition * (1 - easedProgress),
-          behavior: "auto", // We're handling the animation manually
+          behavior: "auto",
         });
 
         if (progress < 1) {
@@ -61,12 +62,12 @@ const Home = () => {
       <Navbar />
       <Hero />
       <EventInfo />
+      <PreviousYearJobizzaa />
       <Overview />
       <ChiefGuest />
       <Sponsors />
       <Categories />
       <Jobizza />
-      <FAQ />
       <Footer />
     </div>
   );
