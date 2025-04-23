@@ -275,33 +275,9 @@
   color: #F44336;
 }
 
+/* Card footer removed (no longer needed without view details button) */
 .card-footer {
-  padding: clamp(1.2rem, 2vw, 1.5rem);
-  text-align: center;
-  background: rgba(15, 20, 37, 0.8);
-}
-
-.btn-view-details {
-  background: linear-gradient(145deg, var(--gold-primary), var(--gold-secondary));
-  color: var(--dark-bg);
-  border: none;
-  padding: clamp(0.7rem, 1.5vw, 0.8rem) clamp(1.5rem, 3vw, 1.8rem);
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
-  letter-spacing: 0.5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto;
-}
-
-.btn-view-details:hover {
-  background: linear-gradient(145deg, var(--gold-secondary), #b69121);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+  display: none;
 }
 
 /* Additional Sections */
@@ -419,6 +395,52 @@
   font-size: clamp(1.5rem, 3vw, 1.8rem);
   font-weight: 600;
 }
+/* Contact details styling - Updated version */
+.btn-contact {
+  background: rgba(15, 20, 37, 0.8);
+  color: var(--gold-primary);
+  padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1.5rem, 3vw, 2rem);
+  border-radius: 30px;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-contact:hover {
+  background: linear-gradient(145deg, var(--gold-primary), var(--gold-secondary));
+  color: var(--dark-bg);
+  transform: translateY(-2px);
+}
+
+a.contact-email, 
+a.contact-phone {
+  background: rgba(15, 20, 37, 0.8);
+  color: var(--gold-primary);
+  padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1.5rem, 3vw, 2rem);
+  border-radius: 30px;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  display: inline-block;
+  text-decoration: none;
+}
+
+a.contact-email:hover, 
+a.contact-phone:hover {
+  background: linear-gradient(145deg, var(--gold-primary), var(--gold-secondary));
+  color: var(--dark-bg);
+  transform: translateY(-2px);
+}
 
 .location-card p {
   color: var(--gold-primary);
@@ -503,24 +525,43 @@
   font-weight: 600;
 }
 
-.btn-contact {
-  background: rgba(15, 20, 37, 0.8);
+/* Modified to make contact details clickable */
+.contact-email {
   color: var(--gold-primary);
-  padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1.5rem, 3vw, 2rem);
-  border-radius: 30px;
-  margin-top: 0.5rem;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  cursor: pointer;
+  text-decoration: none;
   font-weight: 500;
-  letter-spacing: 0.5px;
-  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
-.btn-contact:hover {
-  background: linear-gradient(145deg, var(--gold-primary), var(--gold-secondary));
-  color: var(--dark-bg);
-  transform: translateY(-2px);
+.contact-email:hover {
+  color: var(--gold-secondary);
+  text-decoration: underline;
+}
+
+.contact-phone {
+  color: var(--gold-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.contact-phone:hover {
+  color: var(--gold-secondary);
+  text-decoration: underline;
+}
+
+/* Override for phone and email links */
+a.contact-email {
+  color: var(--gold-primary);
+  text-decoration: none;
+}
+
+a.contact-phone {
+  color: var(--gold-primary);
+  text-decoration: none;
 }
 
 /* Animations */

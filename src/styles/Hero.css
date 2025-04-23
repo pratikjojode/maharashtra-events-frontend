@@ -53,7 +53,7 @@
   padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 0; /* Adjusted to remove extra padding */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -64,28 +64,29 @@
   color: #daa520 !important;
 }
 
+/* UPDATED: Repositioned the presented-by section with color adjustments */
 .presented-by {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 8px;
+  margin-top: 0; /* Moved up by removing top margin */
+  margin-bottom: 10px; /* Added bottom margin for spacing */
   animation: fadeInDown 1s ease;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
+  position: relative;
   text-align: center;
+  order: 2;
 }
 
 .presented-text {
-  color: #333;
-  font-size: 1rem;
+  color: #daa520; /* Kept gold color for consistency */
+  font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 8px 20px;
-  border-radius: 30px;
+  background-color: transparent; /* Removed background */
+  padding: 6px 16px;
+  /* Removed border-radius as no background */
+  /* Removed box-shadow */
 }
 
 .sponsor-logos {
@@ -93,14 +94,16 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
+  margin-top: 2px;
 }
 
 .presenter-logo {
-  height: 30px;
+  height: 32px;
   max-width: 150px;
   width: auto;
   transition: transform 0.3s ease;
+  filter: brightness(1.05); /* Slight brightness adjustment for better visibility */
 }
 
 .presenter-logo:hover {
@@ -114,7 +117,8 @@
 .award-title {
   margin-bottom: 20px;
   animation: fadeInUp 0.8s ease;
-  padding-top: 80px;
+  padding-top: 0;
+  order: 1;
 }
 
 .award-icon {
@@ -152,6 +156,7 @@
   margin-bottom: 20px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   animation: fadeIn 1.2s ease;
+  order: 3;
 }
 
 /* ============================= */
@@ -163,19 +168,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   perspective: 1000px;
-  animation: fadeIn 1.5s ease;
+  animation: fadeIn 0.5s ease;
+  order: 4;
+  transition: transform 0.4s ease; /* Move transform transition here */
+}
+.flip-card-container:hover {
+  transform: translateY(-5px); /* Apply hover effect to container instead */
 }
 
 .flip-card {
   width: 90%;
   max-width: 700px;
-  height: 180px;
+  height: 230px; /* Increased height to better fit text */
   cursor: pointer;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Changed timing function to be smoother */
 }
 
 .flip-card.flipped {
@@ -190,9 +201,9 @@
   transform-style: preserve-3d;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease; /* Removed transform transition from here */
 }
-
+/* Fixed hover animation to be smoother */
 .flip-card:hover .flip-card-inner {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
@@ -207,7 +218,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  padding: 20px;
+  padding: 15px;
+  overflow: hidden;
 }
 
 .flip-card-front {
@@ -225,7 +237,13 @@
 
 .card-content {
   width: 100%;
-  padding: 20px;
+  padding: 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 100%;
 }
 
 .card-icon {
@@ -238,12 +256,18 @@
 .flip-card-back h3 {
   font-size: clamp(1.2rem, 4vw, 1.8rem);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #daa520; /* Added gold color to titles for consistency */
 }
 
 .flip-card-front p,
 .flip-card-back p {
-  font-size: clamp(0.95rem, 3vw, 1.1rem);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   color: #f0f0f0;
+  max-width: 100%;
+  margin: 0 auto;
+  line-height: 1.4; /* Adjusted line height for better readability */
 }
 
 /* ============================= */
@@ -258,6 +282,8 @@
   z-index: 10;
   position: relative;
   flex-wrap: wrap;
+  order: 5;
+  margin-top: 10px;
 }
 
 .btn {
@@ -348,3 +374,55 @@
 @keyframes fadeInUp { from {opacity: 0; transform: translateY(30px);} to {opacity: 1; transform: translateY(0);} }
 @keyframes fadeInDown { from {opacity: 0; transform: translateY(-30px);} to {opacity: 1; transform: translateY(0);} }
 @keyframes pulse { 0%, 100% {transform: scale(1); opacity: 1;} 50% {transform: scale(1.1); opacity: 0.8;} }
+
+/* ============================= */
+/*     RESPONSIVE ADJUSTMENTS   */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+  .hero-content {
+    padding: 0 15px;
+  }
+  
+  .flip-card {
+    max-width: 95%;
+  }
+
+  .flip-card-front p, 
+  .flip-card-back p {
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    line-height: 1.4;
+  }
+  
+  .presented-by {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  
+  .presenter-logo {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .flip-card {
+    height: 250px; /* Even more height on smaller screens */
+  }
+  
+  .presented-text {
+    font-size: 0.9rem;
+    padding: 6px 15px;
+  }
+}

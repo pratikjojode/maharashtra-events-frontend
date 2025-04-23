@@ -1,4 +1,4 @@
-/* Speakers.css - Updated Color Scheme to Match Website Theme */
+/* Speakers.css - Fixed speaker-overlay animations */
 
 /* Font Imports */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
@@ -152,16 +152,12 @@
   opacity: 1;
 }
 
+/* FIXED: Removed clip-path from speaker-img */
 .speaker-img {
   position: relative;
   height: 450px;
   overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-  transition: clip-path 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.speaker-card:hover .speaker-img {
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .speaker-img img {
@@ -178,6 +174,7 @@
   filter: grayscale(0%) contrast(1.05);
 }
 
+/* FIXED: Speaker overlay positioning and z-index */
 .speaker-overlay {
   position: absolute;
   bottom: 30px;
@@ -189,16 +186,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid rgba(212, 175, 55, 0.3);
-  transform: translateY(20px);
-  opacity: 0;
-  z-index: 2;
+  z-index: 10; /* Higher z-index to ensure it's above other elements */
+  opacity: 1; /* Always visible */
+  transition: all 0.4s ease;
+  /* Add pointer-events to ensure clickability */
+  pointer-events: auto;
 }
 
+/* Remove transform on hover and use scale instead */
 .speaker-card:hover .speaker-overlay {
-  transform: translateY(0);
-  opacity: 1;
+  transform: scale(1.1);
+  background: rgba(21, 25, 55, 1);
+  border-color: #d4af37;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 }
 
 .speaker-overlay a {
@@ -527,6 +528,16 @@
   font-size: 1.2rem;
   line-height: 2;
   letter-spacing: 0.5px;
+}
+
+/* Add missing animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Responsive Design */
