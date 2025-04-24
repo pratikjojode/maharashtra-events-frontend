@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card, Carousel, Button } from "antd";
-import { LeftOutlined, RightOutlined, YoutubeOutlined } from "@ant-design/icons";
+import {
+  LeftOutlined,
+  RightOutlined,
+  YoutubeOutlined,
+} from "@ant-design/icons";
 import "../../styles/PreviousYearJobizzaa.css";
 
 // Import images from assets folder
@@ -24,7 +28,7 @@ const PreviousYearJobizzaa = () => {
     },
     {
       id: 2,
-      year: "2023",
+      year: "2024",
       title: "Jobizzaa 2023",
       imageUrl: jobizzaa2023,
       description: "Memorable moments from 2023",
@@ -32,7 +36,7 @@ const PreviousYearJobizzaa = () => {
     },
     {
       id: 3,
-      year: "2022",
+      year: "2024",
       title: "Jobizzaa 2022",
       imageUrl: jobizzaa2022,
       description: "The best of 2022 event",
@@ -40,7 +44,7 @@ const PreviousYearJobizzaa = () => {
     },
     {
       id: 4,
-      year: "2021",
+      year: "2024",
       title: "Jobizzaa 2021",
       imageUrl: jobizzaa2021,
       description: "Looking back at 2021",
@@ -83,9 +87,9 @@ const PreviousYearJobizzaa = () => {
                       src={item.imageUrl}
                       className="card-image"
                     />
-                    <a 
-                      href={item.youtubeLink} 
-                      target="_blank" 
+                    <a
+                      href={item.youtubeLink}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="youtube-overlay"
                     >
