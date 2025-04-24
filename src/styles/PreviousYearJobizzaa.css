@@ -44,11 +44,18 @@
   justify-content: center;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(255, 204, 0, 0.3);
+  cursor: pointer;
+  outline: none;
 }
 
 .carousel-arrow:hover {
   background: #ffd700;
   color: #000;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .carousel-arrow-left {
@@ -119,4 +126,179 @@
   font-size: 16px;
   color: #d6d6d6;
   line-height: 1.6;
+}
+/* YouTube thumbnail hover effect */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.youtube-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .youtube-overlay {
+  opacity: 1;
+}
+
+.youtube-icon {
+  font-size: 80px;
+  color: #ff0000;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
+  transition: transform 0.3s ease;
+}
+
+.youtube-overlay:hover .youtube-icon {
+  transform: scale(1.1);
+}
+
+/* Make sure the image container is responsive */
+@media screen and (max-width: 768px) {
+  .image-container {
+    height: 350px;
+  }
+  
+  .youtube-icon {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .image-container {
+    height: 280px;
+  }
+  
+  .youtube-icon {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .image-container {
+    height: 220px;
+  }
+  
+  .youtube-icon {
+    font-size: 40px;
+  }
+}
+/* Responsive styles */
+@media screen and (max-width: 1100px) {
+  .carousel-arrow-left {
+    left: -30px;
+  }
+  
+  .carousel-arrow-right {
+    right: -30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .previous-year-container {
+    padding: 60px 15px;
+  }
+  
+  .previous-year-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .carousel-arrow-left {
+    left: 10px;
+  }
+  
+  .carousel-arrow-right {
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .previous-year-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .year-card {
+    height: auto;
+    max-width: 90%;
+  }
+  
+  .card-image {
+    height: 350px;
+  }
+  
+  .card-content {
+    padding: 20px 18px;
+  }
+  
+  .card-year {
+    font-size: 24px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .previous-year-container {
+    padding: 40px 12px;
+  }
+  
+  .previous-year-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    padding-bottom: 8px;
+  }
+  
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  
+  .card-image {
+    height: 280px;
+  }
+  
+  .card-year {
+    font-size: 22px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-image {
+    height: 220px;
+  }
+  
+  .card-content {
+    padding: 16px 14px;
+  }
 }

@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Carousel, Button } from "antd";
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import { LeftOutlined, RightOutlined, YoutubeOutlined } from "@ant-design/icons";
 import "../../styles/PreviousYearJobizzaa.css";
 
 // Import images from assets folder
-import jobizzaa2024 from "../../assets/IMG-20250412-WA0006.jpg";
-import jobizzaa2023 from "../../assets/IMG-20250412-WA0005.jpg";
-import jobizzaa2022 from "../../assets/IMG-20250412-WA0004.jpg";
-import jobizzaa2021 from "../../assets/IMG-20250412-WA0003.jpg";
+import jobizzaa2024 from "../../assets/Jobizza2024.jpg";
+import jobizzaa2023 from "../../assets/Jobizza2023.jpg";
+import jobizzaa2022 from "../../assets/Jobizza2022.jpg";
+import jobizzaa2021 from "../../assets/Jobizza2021.jpg";
 
 const PreviousYearJobizzaa = () => {
   const carouselRef = React.useRef();
 
-  // Updated data with imported images
+  // Updated data with imported images and YouTube links
   const previousYearImages = [
     {
       id: 1,
@@ -20,6 +20,7 @@ const PreviousYearJobizzaa = () => {
       title: "Jobizzaa 2024",
       imageUrl: jobizzaa2024,
       description: "Highlights from our 2024 event",
+      youtubeLink: "https://www.youtube.com/watch?v=YqVWQFc_Dpk",
     },
     {
       id: 2,
@@ -27,6 +28,7 @@ const PreviousYearJobizzaa = () => {
       title: "Jobizzaa 2023",
       imageUrl: jobizzaa2023,
       description: "Memorable moments from 2023",
+      youtubeLink: "https://www.youtube.com/watch?v=PEslufDrK38",
     },
     {
       id: 3,
@@ -34,6 +36,7 @@ const PreviousYearJobizzaa = () => {
       title: "Jobizzaa 2022",
       imageUrl: jobizzaa2022,
       description: "The best of 2022 event",
+      youtubeLink: "https://www.youtube.com/watch?v=gEHu_a-HTBk",
     },
     {
       id: 4,
@@ -41,6 +44,7 @@ const PreviousYearJobizzaa = () => {
       title: "Jobizzaa 2021",
       imageUrl: jobizzaa2021,
       description: "Looking back at 2021",
+      youtubeLink: "https://www.youtube.com/watch?v=VyJkD4ZuO80",
     },
   ];
 
@@ -73,11 +77,21 @@ const PreviousYearJobizzaa = () => {
               <Card
                 className="year-card"
                 cover={
-                  <img
-                    alt={item.title}
-                    src={item.imageUrl}
-                    className="card-image"
-                  />
+                  <div className="image-container">
+                    <img
+                      alt={item.title}
+                      src={item.imageUrl}
+                      className="card-image"
+                    />
+                    <a 
+                      href={item.youtubeLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="youtube-overlay"
+                    >
+                      <YoutubeOutlined className="youtube-icon" />
+                    </a>
+                  </div>
                 }
               >
                 <div className="card-content">

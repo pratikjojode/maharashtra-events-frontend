@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaEnvelope,
+  FaYoutube,
 } from "react-icons/fa";
 import { FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -64,12 +65,20 @@ const Footer = () => {
             All rights reserved.
           </p>
           <div className="social-links">
-            <span>
+            <a
+             href="https://www.facebook.com/share/158xqLpSVY/"
+             target="_blank"
+             rel="noopener noreferrer"
+            >
               <FaFacebook />
-            </span>
-            <span>
+              </a>
+            <a
+             href="https://www.instagram.com/jobizzaa?igsh=MTA0NmhjbzF1aHNkbg=="
+             target="_blank"
+             rel="noopener noreferrer"
+            >
               <FaInstagram />
-            </span>
+              </a>
             <a
               href="https://www.linkedin.com/company/jobizza-justice-with-your-innovations/"
               target="_blank"
@@ -77,8 +86,8 @@ const Footer = () => {
             >
               <FaLinkedin />
             </a>
-            <a href="mailto:gaurav@jobizza.com">
-              <FaEnvelope />
+            <a href="https://www.youtube.com/@gauravsharmajobizza2433">
+              <FaYoutube/>
             </a>
             <Link to="/admin-login" />
           </div>
