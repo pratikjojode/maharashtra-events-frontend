@@ -3,7 +3,7 @@ import "../styles/LastYearAwardies.css";
 
 import GaneshRao from "../assets/Gr1.jpg";
 import SandeepPachpande from "../assets/SP1.jpg";
-// import RavikumarChitnis from "../assets/RavikumarCHitnis.jpg";
+import RavikumarChitnis from "../assets/RavikumarCHitnis.jpg";
 import JayeshKatkar from "../assets/JayeshKatkar.jpg";
 import SantoshBorde from "../assets/SantoshBorde.jpg";
 import AnshulSharma from "../assets/MrAnshulSharma.jpg";
@@ -16,7 +16,7 @@ import MangeshKarad from "../assets/MangeshTKarad.jpg";
 import AnitaDiwakar from "../assets/AnitaDiwarkar2.jpg";
 import BharatAgarwal from "../assets/BharatAgarwal.jpg";
 import RamakrishnanRaman from "../assets/RamakrishnanRaman1.jpg";
-// /import SUrajSharma from "../assets/SUrajSharma.jpg";
+import SUrajSharma from "../assets/SUrajSharma.jpg";
 import ChetanChaudhari from "../assets/Chetan-Chaudhari.png";
 import VirajBarge from "../assets/VirajBarge.jpg";
 import ArjunKale from "../assets/ArjunKale.jpg";
@@ -49,11 +49,11 @@ const LastYearAwardees = () => {
       designation: "IBMR",
       image: SandeepPachpande,
     },
-    // {
-    //   name: "Dr. Ravikumar Chitnis",
-    //   designation: "MIT",
-    //   image: RavikumarChitnis,
-    // },
+    {
+      name: "Dr. Ravikumar Chitnis",
+      designation: "MIT",
+      image: RavikumarChitnis,
+    },
     { name: "Dr. Jayesh Katkar", designation: "PCU", image: JayeshKatkar },
     { name: "Dr. Santosh Borde", designation: "DY Patil", image: SantoshBorde },
     { name: "Mr.Anshul Sharma", designation: "MIT", image: AnshulSharma },
@@ -82,7 +82,7 @@ const LastYearAwardees = () => {
       designation: "SIBM",
       image: RamakrishnanRaman,
     },
-    // { name: "Dr. Suraj Sharma", designation: "RIMS", image: SUrajSharma },
+    { name: "Dr. Suraj Sharma", designation: "RIMS", image: SUrajSharma },
     {
       name: "Dr. Chetan Chaudhari",
       designation: "DY patil",
@@ -225,6 +225,7 @@ const LastYearAwardees = () => {
         </button>
       </div>
 
+      {/* Background effects */}
       <div className="background-effects">
         <div className="bg-glow bg-glow-1"></div>
         <div className="bg-glow bg-glow-2"></div>
