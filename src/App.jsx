@@ -18,7 +18,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 import "./index.css";
 import NotFound from "./pages/NotFound";
-import Insights from "./pages/Insights";
+//import Insights from "./pages/Insights";
 
 const SmoothScrollToTop = ({ children }) => {
   const { pathname } = useLocation();

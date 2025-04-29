@@ -9,6 +9,8 @@ import Categories from "../component/Categories/Categories";
 import Jobizza from "../component/Jobizza/Jobizza";
 import Footer from "../component/Footer/Footer";
 import Navbar from "../component/Header/Navbar";
+import LastYearAwardies from "../component/LastYearAwardies";
+import TimeLineSection from "../component/TimeLineSection";
 import "../index.css";
 import "../App.css";
 
@@ -62,7 +64,9 @@ const Home = () => {
       <Navbar />
       <Hero />
       <EventInfo />
+      <TimeLineSection />
       <PreviousYearJobizzaa />
+      <LastYearAwardies />
       <Overview />
       <ChiefGuest />
       <Sponsors />

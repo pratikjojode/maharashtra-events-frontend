@@ -169,11 +169,11 @@
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 15px; /* Changed from 30px to 15px to move buttons up */
   perspective: 1000px;
   animation: fadeIn 0.5s ease;
   order: 4;
-  transition: transform 0.4s ease; /* Move transform transition here */
+  transition: transform 0.4s ease;
 }
 .flip-card-container:hover {
   transform: translateY(-5px); /* Apply hover effect to container instead */
