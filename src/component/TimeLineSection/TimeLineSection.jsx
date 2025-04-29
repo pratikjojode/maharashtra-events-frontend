@@ -1,5 +1,5 @@
-import React from 'react';
-import '../styles/TimeLineSection.css'; // Import your CSS file for styling
+import React from "react";
+import "../../styles/TimeLineSection.css"; // Import your CSS file for styling
 
 const TimelineSection = () => {
   return (
@@ -22,8 +22,17 @@ const TimelineSection = () => {
             <div className="timeline-content">
               <h3>Nomination Deadline</h3>
               <div className="date">20 May 2025</div>
-              <p>Last day to submit your nominations for the Maharashtra Education Icon Awards</p>
-              <a href="https://forms.gle/3bEdJeGGKobD3DLr5" className="timeline-button" target="_blank">Nominate Now</a>
+              <p>
+                Last day to submit your nominations for the Maharashtra
+                Education Icon Awards
+              </p>
+              <a
+                href="https://forms.gle/3bEdJeGGKobD3DLr5"
+                className="timeline-button"
+                target="_blank"
+              >
+                Nominate Now
+              </a>
             </div>
           </div>
 
@@ -42,7 +51,11 @@ const TimelineSection = () => {
         <div className="timeline-note">
           <div className="note-content">
             <h4>Don't Miss Your Chance!</h4>
-            <p>Submit your nominations before the deadline to ensure consideration for the prestigious Maharashtra Education Icon Awards.</p>
+            <p>
+              Submit your nominations before the deadline to ensure
+              consideration for the prestigious Maharashtra Education Icon
+              Awards.
+            </p>
           </div>
         </div>
       </div>

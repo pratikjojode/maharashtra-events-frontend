@@ -9,12 +9,12 @@ import Categories from "../component/Categories/Categories";
 import Jobizza from "../component/Jobizza/Jobizza";
 import Footer from "../component/Footer/Footer";
 import Navbar from "../component/Header/Navbar";
-import LastYearAwardies from "../component/LastYearAwardies";
-import TimeLineSection from "../component/TimeLineSection";
 import "../index.css";
 import "../App.css";
 
 import PreviousYearJobizzaa from "../component/PreviousYear/PreviousYearJobizzaa";
+import LastYearAwardees from "../component/LastYearAwards/LastYearAwardies";
+import TimelineSection from "../component/TimeLineSection/TimeLineSection";
 const Home = () => {
   const animationRef = useRef(null);
 
@@ -64,9 +64,9 @@ const Home = () => {
       <Navbar />
       <Hero />
       <EventInfo />
-      <TimeLineSection />
+      <TimelineSection />
       <PreviousYearJobizzaa />
-      <LastYearAwardies />
+      <LastYearAwardees />
       <Overview />
       <ChiefGuest />
       <Sponsors />
