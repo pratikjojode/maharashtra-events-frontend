@@ -11,7 +11,7 @@ import GirishDesai from "../../assets/GirishDesai.jpg";
 import SHitalWatile from "../../assets/ShitalWatile.jpg";
 import EknathKhedkar from "../../assets/EknathKhedkar.jpg";
 import RajveerBhardwaj from "../../assets/RajveerBhardwaj.jpg";
-import AtulkumarJain from "../../assets/Atul_kumar2.png";
+import AtulkumarJain from "../../assets/Atul_Kumar2.png";
 import MangeshKarad from "../../assets/MangeshTkarad.jpg";
 import AnitaDiwakar from "../../assets/AnitaDiwarkar2.jpg";
 import BharatAgarwal from "../../assets/BharatAgarwal.jpg";
