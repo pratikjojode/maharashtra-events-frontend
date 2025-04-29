@@ -16,7 +16,7 @@ import MangeshKarad from "../assets/MangeshTKarad.jpg";
 import AnitaDiwakar from "../assets/AnitaDiwarkar2.jpg";
 import BharatAgarwal from "../assets/BharatAgarwal.jpg";
 import RamakrishnanRaman from "../assets/RamakrishnanRaman1.jpg";
-import SUrajSharma from "../assets/SUrajSharma.jpg";
+// /import SUrajSharma from "../assets/SUrajSharma.jpg";
 import ChetanChaudhari from "../assets/Chetan-Chaudhari.png";
 import VirajBarge from "../assets/VirajBarge.jpg";
 import ArjunKale from "../assets/ArjunKale.jpg";
@@ -82,7 +82,7 @@ const LastYearAwardees = () => {
       designation: "SIBM",
       image: RamakrishnanRaman,
     },
-    { name: "Dr. Suraj Sharma", designation: "RIMS", image: SUrajSharma },
+    // { name: "Dr. Suraj Sharma", designation: "RIMS", image: SUrajSharma },
     {
       name: "Dr. Chetan Chaudhari",
       designation: "DY patil",
