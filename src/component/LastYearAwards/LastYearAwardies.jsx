@@ -35,7 +35,7 @@ import PramodDastoorkar from "../../assets/Pramod.jpg";
 import SanjeevWagh from "../../assets/SanjeevWagh.jpg";
 import MaheshGudar from "../../assets/MaheshGoudar.jpg";
 import MinakshiTyagi from "../../assets/MinakshiTyagi.jpg";
-import ShivaijraoKadam from "../../assets/ShivajiraoKadam.png";
+import ShivajiraoKadam from "../../assets/ShivajiraoKadam.png";
 
 const LastYearAwardees = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -133,7 +133,7 @@ const LastYearAwardees = () => {
     { name: "Dr. Sanjeev Wagh", designation: "KBPCOE", image: SanjeevWagh },
     { name: "Dr.Mahesh Goudar", designation: "DY Patil", image: MaheshGudar },
     { name: "Ms. Minakshi Tyagi", designation: "DYP", image: MinakshiTyagi },
-    { name: "Dr.Shivajirao Kadam", designation: "MIT", image: ShivaijraoKadam },
+    { name: "Dr.Shivajirao Kadam", designation: "MIT", image: ShivajiraoKadam },
   ];
 
   const awardeesPerPage = 15;
