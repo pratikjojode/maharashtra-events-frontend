@@ -12,7 +12,7 @@ import SHitalWatile from "../../assets/ShitalWatile.jpg";
 import EknathKhedkar from "../../assets/EknathKhedkar.jpg";
 import RajveerBhardwaj from "../../assets/RajveerBhardwaj.jpg";
 import AtulkumarJain from "../../assets/Atul_Kumar2.png";
-import MangeshKarad from "../../assets/MangeshTkarad.jpg";
+import MangeshKarad from "../../assets/Mangeshkarad.jpg";
 import AnitaDiwakar from "../../assets/AnitaDiwarkar2.jpg";
 import BharatAgarwal from "../../assets/BharatAgarwal.jpg";
 import RamakrishnanRaman from "../../assets/RamakrishnanRaman1.jpg";
