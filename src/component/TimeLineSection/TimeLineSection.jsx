@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/TimeLineSection.css"; // Import your CSS file for styling
+import "../../styles/TimeLineSection.css";
 
 const TimelineSection = () => {
   return (

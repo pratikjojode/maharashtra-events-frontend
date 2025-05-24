@@ -16,7 +16,7 @@ import jobizzaa2021 from "../../assets/Jobizza2021.jpg";
 const PreviousYearJobizzaa = () => {
   const carouselRef = React.useRef();
 
-  // Updated data with imported images and YouTube links
+
   const previousYearImages = [
     {
       id: 1,

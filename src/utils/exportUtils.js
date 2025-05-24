@@ -1,7 +1,7 @@
 // utils/exportUtils.js
 import { utils, writeFile } from "xlsx";
 
-// For perfect Excel formatting
+
 export const exportToExcel = (data, filename) => {
   if (!data || data.length === 0) return;
 
@@ -11,14 +11,14 @@ export const exportToExcel = (data, filename) => {
   writeFile(workbook, `${filename}.xlsx`);
 };
 
-// For CSV with better Excel compatibility
+
 export const exportToCSV = (data, filename) => {
   if (!data || data.length === 0) return;
 
   const headers = Object.keys(data[0]);
 
   // Format header row
-  let csvContent = "\ufeff"; // UTF-8 BOM for Excel
+  let csvContent = "\ufeff"; 
   csvContent +=
     headers.map((h) => `"${h.replace(/"/g, '""')}"`).join(",") + "\r\n";
 
@@ -44,7 +44,7 @@ export const exportToCSV = (data, filename) => {
     csvContent += rowValues.join(",") + "\r\n";
   });
 
-  // Trigger download
+  
   const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
