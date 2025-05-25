@@ -343,21 +343,34 @@ function AdminDashboard() {
                               {key ===
                                 "13.Upload accreditations, recognition letters, research/placement highlights, or other supporting documents." &&
                               typeof val === "string" &&
-                              val.startsWith("https://drive.google.com") ? (
-                                <a
-                                  href={val}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="drive-link"
-                                  style={{ wordBreak: "break-word" }}
-                                >
-                                  {val}
-                                </a>
-                              ) : String(val).length > 30 ? (
-                                `${String(val).substring(0, 30)}...`
-                              ) : (
-                                val
-                              )}
+                              val.includes("https://drive.google.com")
+                                ? val
+                                    .split(/,\s*|%20/)
+                                    .filter((link) =>
+                                      link.startsWith(
+                                        "https://drive.google.com"
+                                      )
+                                    )
+                                    .map((link, index) => (
+                                      <div key={index}>
+                                        <a
+                                          href={link.trim()}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="drive-link"
+                                          style={{
+                                            wordBreak: "break-word",
+                                            display: "block",
+                                            color: "#1a73e8",
+                                          }}
+                                        >
+                                          Drive Link {index + 1}
+                                        </a>
+                                      </div>
+                                    ))
+                                : typeof val === "string" && val.length > 30
+                                ? `${val.substring(0, 30)}...`
+                                : val}
                             </div>
                           </td>
                         ) : null
@@ -443,13 +456,14 @@ function AdminDashboard() {
         {selectedResponse && (
           <div className="response-details">
             {Object.entries(selectedResponse).map(([key, val]) => {
-              if (
-                key ===
-                "13.Upload accreditations, recognition letters, research/placement highlights, or other supporting documents."
-              ) {
-                const urlRegex = /(https?:\/\/[^\s,]+)/g;
-                const links =
-                  typeof val === "string" ? val.match(urlRegex) || [] : [];
+              const isDriveField =
+                key.trim().startsWith("13.") &&
+                typeof val === "string" &&
+                val.includes("https://drive.google.com");
+
+              if (isDriveField) {
+                const urlRegex = /https:\/\/drive\.google\.com\/[^\s,]+/g;
+                const links = val.match(urlRegex) || [];
 
                 return (
                   <div key={key} className="detail-row">
@@ -470,7 +484,7 @@ function AdminDashboard() {
                                   marginRight: "10px",
                                 }}
                               >
-                                {link}
+                                {`Drive Link ${i + 1}`}
                               </a>
                               {driveDownloadLink && (
                                 <a
@@ -479,7 +493,7 @@ function AdminDashboard() {
                                   className="download-button"
                                   style={{
                                     backgroundColor: "#0f1c33",
-                                    color: "white",
+                                    color: "black",
                                     padding: "5px 10px",
                                     borderRadius: "4px",
                                     textDecoration: "none",
@@ -511,7 +525,7 @@ function AdminDashboard() {
                         (val.startsWith("http://") ||
                           val.startsWith("https://")) ? (
                           <a
-                            href={String(val)}
+                            href={val}
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{
@@ -519,15 +533,11 @@ function AdminDashboard() {
                               marginRight: "10px",
                             }}
                           >
-                            {String(val).length > 50
-                              ? `${String(val).substring(0, 50)}...`
-                              : val}
+                            {val /* show full URL, no truncation */}
                           </a>
                         ) : (
                           <span>
-                            {String(val).length > 50
-                              ? `${String(val).substring(0, 50)}...`
-                              : val}
+                            {String(val) /* show full text, no truncation */}
                           </span>
                         )}
 

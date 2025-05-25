@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo2 from "../../assets/logo2.png";
 import "../../styles/Navbar.css";
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
     <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <NavLink to="/" className="logo-link" onClick={closeMenu}>
-          <img src={logo} alt="Company Logo" className="logo" />
+          <img src={logo2} alt="Company Logo" className="logo" />
         </NavLink>
 
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
