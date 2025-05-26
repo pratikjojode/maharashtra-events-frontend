@@ -8,6 +8,7 @@ const AdminAttendance = () => {
   const [loading, setLoading] = useState(true);
   const [viewMode, setViewMode] = useState("table");
   const [modalData, setModalData] = useState(null); // data for modal
+  const [filterTerm, setFilterTerm] = useState(""); // New state for filter term
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,7 +44,22 @@ const AdminAttendance = () => {
   // Modal close handler
   const closeModal = () => setModalData(null);
 
-  // Modal component
+  // Filtered attendance data
+  const filteredAttendanceData = attendanceData.filter((row) => {
+    // If filter term is empty, show all data
+    if (!filterTerm) return true;
+
+    // Convert filter term to lowercase for case-insensitive search
+    const lowerCaseFilterTerm = filterTerm.toLowerCase();
+
+    // Check if any header's corresponding value in the row includes the filter term
+    return headers.some((header) => {
+      const value = String(row[header]).toLowerCase();
+      return value.includes(lowerCaseFilterTerm);
+    });
+  });
+
+  // Modal component (remains unchanged)
   const Modal = ({ data, onClose }) => (
     <div className="admin-attendance__modal-overlay" onClick={onClose}>
       <div
@@ -95,12 +111,21 @@ const AdminAttendance = () => {
           </button>
         </div>
 
+        {/* Filter Input */}
+        <input
+          type="text"
+          placeholder="Filter attendees..."
+          className="admin-attendance__filter-input"
+          value={filterTerm}
+          onChange={(e) => setFilterTerm(e.target.value)}
+        />
+
         <div className="admin-attendance__total-count">
-          Total Attendees: {attendanceData.length}
+          Total Attendees: {filteredAttendanceData.length}
         </div>
 
         <CSVLink
-          data={attendanceData}
+          data={filteredAttendanceData} // Export filtered data
           headers={headers.map((h) => ({ label: h, key: h }))}
           filename={"attendance_data.csv"}
           className="admin-attendance__csv-export-button"
@@ -123,48 +148,58 @@ const AdminAttendance = () => {
               </tr>
             </thead>
             <tbody className="admin-attendance__table-body">
-              {attendanceData.map((row, idx) => (
-                <tr key={idx} className="admin-attendance__table-row">
-                  {headers.map((header) => (
-                    <td key={header} className="admin-attendance__table-data">
-                      {row[header]}
+              {filteredAttendanceData.map(
+                (
+                  row,
+                  idx // Render filtered data
+                ) => (
+                  <tr key={idx} className="admin-attendance__table-row">
+                    {headers.map((header) => (
+                      <td key={header} className="admin-attendance__table-data">
+                        {row[header]}
+                      </td>
+                    ))}
+                    <td className="admin-attendance__table-data">
+                      <button
+                        className="admin-attendance__view-btn"
+                        onClick={() => setModalData(row)}
+                        aria-label={`View details of ${row[headers[0]]}`}
+                      >
+                        👁️
+                      </button>
                     </td>
-                  ))}
-                  <td className="admin-attendance__table-data">
-                    <button
-                      className="admin-attendance__view-btn"
-                      onClick={() => setModalData(row)}
-                      aria-label={`View details of ${row[headers[0]]}`}
-                    >
-                      👁️
-                    </button>
-                  </td>
-                </tr>
-              ))}
+                  </tr>
+                )
+              )}
             </tbody>
           </table>
         </div>
       ) : (
         <div className="admin-attendance__grid-view">
-          {attendanceData.map((row, idx) => (
-            <div className="admin-attendance__grid-card" key={idx}>
-              {headers.map((header) => (
-                <p key={header} className="admin-attendance__grid-item">
-                  <strong className="admin-attendance__grid-item-label">
-                    {header}:
-                  </strong>{" "}
-                  {row[header]}
-                </p>
-              ))}
-              <button
-                className="admin-attendance__view-btn"
-                onClick={() => setModalData(row)}
-                aria-label={`View details of ${row[headers[0]]}`}
-              >
-                👁️ View Details
-              </button>
-            </div>
-          ))}
+          {filteredAttendanceData.map(
+            (
+              row,
+              idx // Render filtered data
+            ) => (
+              <div className="admin-attendance__grid-card" key={idx}>
+                {headers.map((header) => (
+                  <p key={header} className="admin-attendance__grid-item">
+                    <strong className="admin-attendance__grid-item-label">
+                      {header}:
+                    </strong>{" "}
+                    {row[header]}
+                  </p>
+                ))}
+                <button
+                  className="admin-attendance__view-btn"
+                  onClick={() => setModalData(row)}
+                  aria-label={`View details of ${row[headers[0]]}`}
+                >
+                  👁️ View Details
+                </button>
+              </div>
+            )
+          )}
         </div>
       )}
 

@@ -1,397 +1,278 @@
-/* AdminAttendance.css */
+/* AdminAttendance.css - Golden Theme */
 
-/* --- Root Variables for a Premium Gold Theme --- */
+/* Define Golden Theme Variables */
 :root {
-  /* Gold Palette */
-  --primary-gold: #d4af37; /* Main gold color */
-  --secondary-gold: #b8860b; /* Slightly darker gold */
-  --dark-gold: #996515; /* Deep, rich gold for headings/accents */
-  --light-gold: #f5ecc9; /* Very light gold for backgrounds/hovers */
-  --cream: #fffcf0; /* Soft off-white for main backgrounds */
-  --off-white: #fdfaf5; /* A slightly warmer white */
-
-  /* Grayscale Palette */
-  --dark-text: #333333; /* For primary text */
-  --medium-grey: #666666; /* For secondary text/subtlety */
-  --light-grey: #e0e0e0; /* For borders, inactive states */
-  --border-dark-grey: #c0c0c0; /* Slightly darker for distinct borders */
-
-  /* Gradients */
-  --gold-gradient: linear-gradient(
-    135deg,
-    var(--primary-gold),
-    var(--secondary-gold)
-  );
-  --gold-gradient-hover: linear-gradient(
-    135deg,
-    var(--secondary-gold),
-    var(--dark-gold)
-  );
-
-  /* Shadows for Depth and Elegance */
-  --shadow-soft: 0 4px 15px rgba(212, 175, 55, 0.15); /* Subtle depth */
-  --shadow-medium: 0 8px 25px rgba(184, 134, 11, 0.25); /* More pronounced for cards */
-  --shadow-hover: 0 12px 30px rgba(184, 134, 11, 0.35); /* For interactive elements */
-  --shadow-modal: 0 25px 60px rgba(0, 0, 0, 0.35); /* Deep shadow for modals */
-
-  /* Borders & Radii */
-  --border-radius-main: 16px; /* Larger, softer corners for main elements */
-  --border-radius-sm: 8px; /* Standard for smaller elements */
-  --border-radius-pill: 30px; /* For pill-shaped buttons/toggles */
-
-  /* Transitions for Smooth Interactions */
-  --transition-ease: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth and elegant */
-
-  /* Modal Specific */
-  --modal-overlay-bg: rgba(0, 0, 0, 0.7); /* Darker, more immersive overlay */
-  --modal-close-color: #a0a0a0;
-  --modal-close-hover-color: #e74c3c; /* Red for emphasis on close */
+  --gold-primary: #daa520; /* Goldenrod - main gold color */
+  --gold-secondary: #b8860b; /* DarkGoldenrod - deeper gold for accents */
+  --gold-light: #ffd700; /* Gold - brighter highlight */
+  --gold-lighter-bg: #fffacd; /* LemonChiffon - very light gold for backgrounds */
+  --gold-text: #6b4c00; /* Dark brown/gold for text */
+  --gold-accent-text: #4a3300; /* Even darker for strong text */
+  --neutral-bg: #fdfcef; /* Off-white for overall background */
+  --neutral-card-bg: #ffffff;
+  --neutral-border: #e0dbcf; /* Soft, warm gray border */
+  --shadow-color-light: rgba(218, 165, 32, 0.2);
+  --shadow-color-dark: rgba(184, 134, 11, 0.3);
+  --success-color: #388e3c; /* A standard green for success */
+  --button-text-light: #ffffff;
 }
 
-/* --- Base Styles --- */
-body {
-  margin: 0;
-  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-color: var(--cream);
-  color: var(--dark-text);
-  line-height: 1.6;
-  font-size: 16px;
-  overflow-x: hidden; /* Prevent horizontal scroll due to animations */
-}
-
-/* --- Admin Attendance Container --- */
+/* General container and typography */
 .admin-attendance {
-  padding: 40px;
-  max-width: 1400px; /* Increased max-width for a spacious feel */
-  margin: 50px auto; /* Centered with generous top/bottom margin */
-  background-color: var(--off-white); /* Slightly warmer white for main card */
-  border-radius: var(--border-radius-main);
-  box-shadow: var(--shadow-medium);
-  min-height: calc(100vh - 100px); /* Ensures it fills most of the viewport */
-  display: flex;
-  flex-direction: column;
-  position: relative; /* For potential future absolute positioning */
-  overflow: hidden; /* Hide anything overflowing due to internal elements */
+  padding: 30px;
+  max-width: 1400px;
+  margin: 20px auto;
+  font-family: "Georgia", serif; /* More classic font */
+  color: var(--gold-text);
+  background-color: var(--neutral-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px var(--shadow-color-light);
 }
 
-/* --- Loading and No Records Messages --- */
+/* Loading and No Records messages */
 .admin-attendance__loading,
 .admin-attendance__no-records {
   text-align: center;
-  font-size: 1.6em;
-  color: var(--medium-grey);
-  padding: 80px 40px;
-  background-color: var(--light-gold);
-  border-radius: var(--border-radius-main);
-  box-shadow: var(--shadow-soft);
-  margin-top: 40px;
-  font-weight: 500;
-  border: 1px solid rgba(var(--primary-gold), 0.3);
-  letter-spacing: 0.5px;
-}
-
-/* --- Main Heading --- */
-.admin-attendance__heading {
-  text-align: center;
-  color: var(--dark-gold);
-  margin-bottom: 60px;
-  font-size: 3.5em; /* Large and impactful */
-  font-weight: 800; /* Extra bold */
-  position: relative;
-  letter-spacing: -1px;
-  line-height: 1.1;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); /* Subtle text shadow */
-}
-
-.admin-attendance__heading::after {
-  content: "";
-  width: 150px; /* Wider underline */
-  height: 8px; /* Thicker underline */
-  background: var(--gold-gradient);
-  position: absolute;
-  bottom: -25px; /* Further below the text */
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 5px; /* Slightly rounded underline */
-  box-shadow: var(--shadow-soft);
+  padding: 50px;
+  font-size: 1.3em;
+  color: var(--gold-accent-text);
+  background-color: var(--neutral-card-bg);
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
 /* --- Controls Section --- */
 .admin-attendance__controls {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
-  gap: 30px; /* More space between control elements */
-  padding: 25px 35px;
-  background-color: var(--light-gold);
-  border-radius: var(--border-radius-main);
-  box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(var(--primary-gold), 0.25);
+  margin-bottom: 30px;
+  gap: 20px;
+  padding: 15px 20px;
+  background-color: var(--neutral-card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow-color-light);
 }
 
-/* Toggle Buttons (Table/Grid View) */
+/* Toggle buttons for view mode */
 .admin-attendance__toggle-buttons {
   display: flex;
-  background-color: var(--cream);
-  border-radius: var(--border-radius-pill);
-  padding: 8px; /* More padding around pills */
-  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--border-dark-grey);
+  background-color: var(--gold-lighter-bg); /* Very light gold background */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .admin-attendance__toggle-button {
+  padding: 12px 22px;
+  border: none;
   background-color: transparent;
-  color: var(--medium-grey);
-  border: none;
-  padding: 14px 32px; /* Generous padding for clickable area */
-  border-radius: var(--border-radius-pill);
   cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 600;
-  transition: var(--transition-ease);
-  outline: none;
-  flex-shrink: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  user-select: none; /* Prevent text selection on click */
-}
-
-.admin-attendance__toggle-button:hover:not(
-    .admin-attendance__toggle-button--active
-  ) {
-  color: var(--dark-gold);
-  background-color: rgba(var(--primary-gold), 0.1); /* Subtle hover effect */
-}
-
-.admin-attendance__toggle-button--active {
-  background: var(--gold-gradient);
-  color: white;
-  box-shadow: var(--shadow-hover);
-  transform: scale(1.02); /* Slight scale for active state */
-}
-
-/* Total Attendees Count */
-.admin-attendance__total-count {
-  font-size: 1.3em;
-  font-weight: 700;
-  color: var(--dark-gold);
-  background-color: var(--cream);
-  padding: 16px 30px;
-  border-radius: var(--border-radius-pill);
-  box-shadow: var(--shadow-soft);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border: 1px solid rgba(var(--primary-gold), 0.35);
-  flex-shrink: 0;
-}
-
-.admin-attendance__total-count::before {
-  content: "👥"; /* Unicode icon for person group */
-  font-size: 1.3em;
-  vertical-align: middle;
-}
-
-/* Export to CSV Button */
-.admin-attendance__csv-export-button {
-  background: var(--gold-gradient);
-  color: white;
-  padding: 16px 32px;
-  border-radius: var(--border-radius-pill);
-  text-decoration: none;
-  font-size: 1.15em;
-  font-weight: 700;
-  transition: var(--transition-ease);
-  box-shadow: var(--shadow-medium);
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  flex-shrink: 0;
-}
-
-.admin-attendance__csv-export-button::before {
-  content: "📊"; /* Unicode icon for bar chart */
-  font-size: 1.2em;
-  vertical-align: middle;
-}
-
-.admin-attendance__csv-export-button:hover {
-  background: var(--gold-gradient-hover);
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: var(--shadow-hover);
-}
-
-/* --- Table View --- */
-.admin-attendance__table-container {
-  overflow-x: auto; /* Enables horizontal scrolling for wide tables */
-  margin-top: 30px;
-  border-radius: var(--border-radius-main);
-  box-shadow: var(--shadow-medium);
-  background-color: #ffffff;
-  border: 1px solid var(--light-grey); /* Subtle outer border */
-}
-
-.admin-attendance__table {
-  width: 100%;
-  border-collapse: separate; /* Allows individual cell styling */
-  border-spacing: 0;
-  min-width: 900px; /* Ensures horizontal scroll if content is too wide */
-  overflow: hidden; /* For table border-radius to work */
-}
-
-.admin-attendance__table-header th {
-  background-color: var(--dark-gold);
-  color: white;
-  font-weight: 700;
-  text-align: left;
-  padding: 22px 35px; /* More padding for header cells */
-  text-transform: uppercase;
   font-size: 1em;
-  letter-spacing: 1px;
-  position: sticky;
-  top: 0; /* Sticky header for scrollable table */
-  z-index: 10;
-  border-bottom: 3px solid var(--primary-gold); /* Thicker gold underline */
-}
-
-/* Apply border-radius to the first and last header cells */
-.admin-attendance__table-header th:first-child {
-  border-top-left-radius: var(--border-radius-main);
-}
-.admin-attendance__table-header th:last-child {
-  border-top-right-radius: var(--border-radius-main);
-}
-
-.admin-attendance__table-body {
-  background-color: #ffffff;
-}
-
-.admin-attendance__table-row:nth-child(even) {
-  background-color: var(--cream);
-}
-
-.admin-attendance__table-row:hover {
-  background-color: var(--light-gold);
-  transition: background-color 0.2s ease;
-  cursor: pointer;
-}
-
-.admin-attendance__table-data {
-  text-align: left;
-  padding: 20px 35px; /* Consistent padding with headers */
-  border-bottom: 1px solid var(--light-grey);
-  color: var(--dark-text);
-  font-size: 1em;
-  vertical-align: middle; /* Align content vertically */
-}
-
-/* Center content in the "View" column */
-.admin-attendance__table-data:last-child {
-  text-align: center;
-}
-
-/* Remove bottom border from last row for aesthetic */
-.admin-attendance__table-body
-  .admin-attendance__table-row:last-child
-  .admin-attendance__table-data {
-  border-bottom: none;
-}
-
-/* View Button (Table & Grid) */
-.admin-attendance__view-btn {
-  background: var(--gold-gradient);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: var(--border-radius-sm);
-  cursor: pointer;
-  font-size: 0.95em;
-  font-weight: 600;
-  transition: var(--transition-ease);
-  box-shadow: 0 3px 10px rgba(184, 134, 11, 0.25);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.admin-attendance__view-btn:hover {
-  background: var(--gold-gradient-hover);
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 6px 15px rgba(184, 134, 11, 0.35);
-}
-
-/* --- Grid View --- */
-.admin-attendance__grid-view {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(320px, 1fr)
-  ); /* Larger min-width for cards */
-  gap: 35px; /* Increased gap */
-  margin-top: 30px;
-  padding-bottom: 20px; /* Ensure space for pagination below */
-}
-
-.admin-attendance__grid-card {
-  background-color: #ffffff;
-  border-radius: var(--border-radius-main);
-  box-shadow: var(--shadow-medium);
-  padding: 35px; /* More internal padding */
-  transition: var(--transition-ease);
-  border: 1px solid var(--light-gold);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  color: var(--gold-text);
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.admin-attendance__grid-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.admin-attendance__toggle-button:hover {
+  background-color: var(--gold-light);
+  color: var(--gold-accent-text);
+}
+
+.admin-attendance__toggle-button--active {
+  background-color: var(--gold-primary);
+  color: var(--button-text-light);
+  font-weight: 600;
+  box-shadow: 0 2px 8px var(--shadow-color-dark);
+  border-radius: 8px;
+}
+
+/* Total attendees count */
+.admin-attendance__total-count {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--gold-secondary);
+  padding: 5px 10px;
+  background-color: var(--gold-lighter-bg);
+  border-radius: 6px;
+  animation: pulse 1.5s infinite alternate;
+  border: 1px solid var(--gold-light); /* Subtle border */
+}
+
+/* CSV Export Button */
+.admin-attendance__csv-export-button {
+  background-color: var(--success-color); /* Keep a standard success green */
+  color: var(--button-text-light);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(56, 142, 60, 0.3);
+}
+
+.admin-attendance__csv-export-button:hover {
+  background-color: #2e7d32; /* Darker green on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(56, 142, 60, 0.4);
+}
+
+.admin-attendance__csv-export-button::before {
+  content: "⬇️";
+  margin-right: 5px;
+}
+
+/* --- Table View Specific Styles --- */
+.admin-attendance__table-container {
+  overflow-x: auto;
+  border: 1px solid var(--neutral-border);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px var(--shadow-color-light);
+  background-color: var(--neutral-card-bg);
+}
+
+.admin-attendance__table {
   width: 100%;
-  height: 6px; /* Thicker accent bar */
-  background: var(--gold-gradient);
-  border-top-left-radius: var(--border-radius-main);
-  border-top-right-radius: var(--border-radius-main);
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 700px;
+}
+
+.admin-attendance__table-header {
+  background-color: var(--gold-lighter-bg); /* Lighter gold for header */
+}
+
+.admin-attendance__table-heading {
+  padding: 15px 20px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.95em;
+  color: var(--gold-accent-text);
+  border-bottom: 1px solid var(--neutral-border);
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: inherit;
+}
+
+.admin-attendance__table-body .admin-attendance__table-row {
+  border-bottom: 1px solid #f8f5e5; /* Very light gold border */
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.admin-attendance__table-body .admin-attendance__table-row:last-child {
+  border-bottom: none;
+}
+
+.admin-attendance__table-body .admin-attendance__table-row:nth-child(even) {
+  background-color: #fdfbf0; /* Slightly different shade for even rows */
+}
+
+.admin-attendance__table-body .admin-attendance__table-row:hover {
+  background-color: var(--gold-lighter-bg); /* Highlight on hover */
+  transform: scale(1.005);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.admin-attendance__table-data {
+  padding: 12px 20px;
+  font-size: 0.9em;
+  color: var(--gold-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+/* View button inside table/grid */
+.admin-attendance__view-btn {
+  background-color: var(--gold-primary);
+  color: var(--button-text-light);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px var(--shadow-color-light);
+}
+
+.admin-attendance__view-btn:hover {
+  background-color: var(--gold-secondary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px var(--shadow-color-dark);
+}
+
+.admin-attendance__view-btn::before {
+  content: "🔍";
+  font-size: 1.1em;
+}
+
+/* --- Grid View Specific Styles --- */
+.admin-attendance__grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 15px;
+}
+
+.admin-attendance__grid-card {
+  background-color: var(--neutral-card-bg);
+  border: 1px solid var(--neutral-border);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 20px var(--shadow-color-light);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
 }
 
 .admin-attendance__grid-card:hover {
-  transform: translateY(-12px) scale(1.01); /* More pronounced lift on hover */
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px var(--shadow-color-dark);
+  border-color: var(--gold-primary);
 }
 
 .admin-attendance__grid-item {
-  margin: 12px 0; /* More vertical spacing */
-  font-size: 1.05em;
-  color: var(--medium-grey);
-  line-height: 1.5;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px; /* Space between label and value */
-  align-items: baseline;
+  font-size: 1em;
+  color: var(--gold-text);
+  margin: 0;
+  line-height: 1.6;
+  word-wrap: break-word;
 }
 
-.admin-attendance__grid-item-label {
-  color: var(--dark-text);
-  font-weight: 700;
-  min-width: 110px; /* Align labels better */
-  flex-shrink: 0;
+.admin-attendance__grid-item strong {
+  color: var(--gold-accent-text);
+  font-weight: 600;
+  min-width: 120px;
+  display: inline-block;
 }
 
 .admin-attendance__grid-card .admin-attendance__view-btn {
-  margin-top: 20px; /* More space above the button */
-  align-self: flex-start; /* Align button to the start */
+  margin-top: 15px;
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-size: 0.95em;
+  box-shadow: 0 3px 8px var(--shadow-color-light);
 }
 
 /* --- Modal Styles --- */
@@ -401,38 +282,67 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--modal-overlay-bg);
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.75
+  ); /* Slightly darker overlay for contrast */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  animation: fadeIn 0.3s ease-out forwards;
+  animation: fadeIn 0.3s forwards;
 }
 
 .admin-attendance__modal-content {
-  background-color: #ffffff;
+  background-color: var(--neutral-card-bg);
   padding: 40px;
-  border-radius: 20px; /* Even larger radius for modal */
-  box-shadow: var(--shadow-modal);
-  max-width: 600px; /* Generous width for details */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px var(--shadow-color-dark);
+  max-width: 550px;
   width: 90%;
   position: relative;
-  max-height: 90vh; /* More height for content */
-  overflow-y: auto; /* Scrollable content */
-  animation: slideIn 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) forwards; /* Smoother slide in */
-  border: 2px solid var(--primary-gold); /* Prominent gold border */
+  animation: slideIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  max-height: 85vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--gold-primary); /* Golden border for modal */
 }
 
 .admin-attendance__modal-content h3 {
-  color: var(--dark-gold);
-  font-size: 2.5em; /* Larger modal title */
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  color: var(--gold-secondary);
   text-align: center;
-  border-bottom: 2px solid var(--light-gold);
-  padding-bottom: 18px;
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--gold-lighter-bg);
+  padding-bottom: 15px;
   font-weight: 700;
-  letter-spacing: -0.8px;
+}
+
+.admin-attendance__modal-body {
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+.admin-attendance__modal-body p {
+  margin-bottom: 12px;
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: var(--gold-text);
+  word-wrap: break-word;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.admin-attendance__modal-body strong {
+  color: var(--gold-accent-text);
+  min-width: 120px;
+  display: inline-block;
+  font-weight: 600;
 }
 
 .admin-attendance__modal-close-btn {
@@ -441,111 +351,21 @@ body {
   right: 18px;
   background: none;
   border: none;
-  font-size: 3em; /* Very large 'X' */
-  color: var(--modal-close-color);
+  font-size: 2.2em;
   cursor: pointer;
-  padding: 0 12px;
+  color: var(--gold-primary);
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 5px;
   border-radius: 50%;
-  transition: var(--transition-ease);
-  line-height: 1;
-  font-weight: 200;
-  outline: none;
 }
 
 .admin-attendance__modal-close-btn:hover {
-  color: var(--modal-close-hover-color);
-  background-color: rgba(231, 76, 60, 0.1); /* Light red background on hover */
-  transform: rotate(90deg) scale(1.15); /* More dramatic rotation and scale */
+  color: var(--gold-secondary);
+  transform: rotate(90deg);
+  background-color: var(--gold-lighter-bg);
 }
 
-.admin-attendance__modal-body {
-  display: flex;
-  flex-direction: column;
-  gap: 18px; /* More space between detail lines */
-}
-
-.admin-attendance__modal-body p {
-  margin: 0;
-  font-size: 1.15em;
-  color: var(--dark-text);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: baseline;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.1); /* More visible dashed separator */
-}
-
-.admin-attendance__modal-body p:last-child {
-  border-bottom: none;
-}
-
-.admin-attendance__modal-body strong {
-  color: var(--primary-gold);
-  min-width: 140px; /* Align labels in modal */
-  flex-shrink: 0;
-  font-weight: 700;
-}
-
-/* --- Pagination Styles --- */
-.admin-attendance__pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px; /* More space above pagination */
-  padding: 20px 25px;
-  background-color: var(--cream);
-  border-radius: var(--border-radius-pill); /* Pill-shaped container */
-  box-shadow: var(--shadow-soft);
-  gap: 12px; /* More space between buttons */
-  flex-wrap: wrap;
-  border: 1px solid rgba(var(--primary-gold), 0.2);
-}
-
-.admin-attendance__pagination-button {
-  background-color: var(--light-gold);
-  color: var(--dark-text);
-  border: 1px solid var(--primary-gold);
-  padding: 12px 22px; /* Generous padding */
-  border-radius: var(--border-radius-pill); /* Pill-shaped buttons */
-  cursor: pointer;
-  font-size: 1.05em;
-  font-weight: 600;
-  transition: var(--transition-ease);
-  min-width: 50px; /* Consistent button width */
-  text-align: center;
-  user-select: none;
-}
-
-.admin-attendance__pagination-button:hover:not(:disabled):not(
-    .admin-attendance__pagination-button--active
-  ) {
-  background: var(--gold-gradient); /* Gradient on hover */
-  color: white;
-  box-shadow: var(--shadow-soft);
-  transform: translateY(-3px) scale(1.02);
-}
-
-.admin-attendance__pagination-button--active {
-  background: var(--gold-gradient);
-  color: white;
-  border-color: var(--dark-gold);
-  box-shadow: var(--shadow-medium);
-  cursor: default;
-  transform: scale(1.05); /* Slightly larger when active */
-}
-
-.admin-attendance__pagination-button:disabled {
-  background-color: var(--light-grey);
-  color: var(--medium-grey);
-  border-color: var(--light-grey);
-  cursor: not-allowed;
-  opacity: 0.6;
-  box-shadow: none;
-  transform: none;
-}
-
-/* --- Keyframe Animations --- */
+/* --- Animations (retained from previous) --- */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -557,7 +377,7 @@ body {
 
 @keyframes slideIn {
   from {
-    transform: translateY(-80px) scale(0.85);
+    transform: translateY(-70px) scale(0.9);
     opacity: 0;
   }
   to {
@@ -566,300 +386,198 @@ body {
   }
 }
 
-/* --- Responsive Adjustments --- */
-
-@media (max-width: 1200px) {
-  .admin-attendance {
-    padding: 35px;
-    margin: 40px auto;
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 1;
   }
-  .admin-attendance__heading {
-    font-size: 3em;
-    margin-bottom: 50px;
-  }
-  .admin-attendance__heading::after {
-    width: 130px;
-    height: 7px;
-    bottom: -20px;
-  }
-  .admin-attendance__controls {
-    padding: 20px 30px;
-    gap: 25px;
-  }
-  .admin-attendance__toggle-button {
-    padding: 12px 28px;
-    font-size: 1em;
-  }
-  .admin-attendance__total-count {
-    font-size: 1.2em;
-    padding: 14px 28px;
-  }
-  .admin-attendance__csv-export-button {
-    font-size: 1.1em;
-    padding: 14px 28px;
-  }
-  .admin-attendance__table-header th,
-  .admin-attendance__table-data {
-    padding: 18px 30px;
-  }
-  .admin-attendance__grid-view {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-  }
-  .admin-attendance__grid-card {
-    padding: 30px;
-  }
-  .admin-attendance__pagination {
-    margin-top: 40px;
-    padding: 18px 22px;
-  }
-  .admin-attendance__pagination-button {
-    padding: 10px 20px;
+  to {
+    transform: scale(1.03);
+    opacity: 0.95;
   }
 }
 
+/* --- Media Queries for Responsiveness (adjusted colors) --- */
+
 @media (max-width: 992px) {
   .admin-attendance {
-    padding: 30px;
-    margin: 30px auto;
+    padding: 20px;
   }
-  .admin-attendance__heading {
-    font-size: 2.8em;
-    margin-bottom: 40px;
-  }
-  .admin-attendance__heading::after {
-    width: 110px;
-    height: 6px;
-    bottom: -18px;
-  }
+
   .admin-attendance__controls {
     flex-direction: column;
     align-items: stretch;
-    padding: 18px 25px;
-    gap: 20px;
+    padding: 15px;
   }
-  .admin-attendance__toggle-buttons {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 6px;
-  }
-  .admin-attendance__toggle-button {
-    flex: 1;
-    padding: 10px 22px;
-    font-size: 0.95em;
-  }
-  .admin-attendance__total-count,
+
+  .admin-attendance__toggle-buttons,
   .admin-attendance__csv-export-button {
     width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .admin-attendance__total-count {
     text-align: center;
-    justify-content: center;
-    font-size: 1.1em;
-    padding: 12px 25px;
+    width: 100%;
+    margin-bottom: 15px;
   }
-  .admin-attendance__table {
-    min-width: 750px;
-  }
-  .admin-attendance__table-header th,
+
+  .admin-attendance__table-heading,
   .admin-attendance__table-data {
-    padding: 16px 25px;
-    font-size: 0.9em;
-  }
-  .admin-attendance__grid-view {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-  }
-  .admin-attendance__grid-card {
-    padding: 28px;
-  }
-  .admin-attendance__pagination {
-    margin-top: 35px;
-    padding: 15px 20px;
-    gap: 10px;
-  }
-  .admin-attendance__pagination-button {
-    padding: 9px 18px;
-    font-size: 1em;
+    padding: 12px 15px;
   }
 }
 
 @media (max-width: 768px) {
   .admin-attendance {
-    padding: 25px;
-    margin: 25px auto;
-    border-radius: 12px;
-  }
-  .admin-attendance__heading {
-    font-size: 2.4em;
-    margin-bottom: 35px;
-  }
-  .admin-attendance__heading::after {
-    width: 90px;
-    height: 5px;
-    bottom: -15px;
-  }
-  .admin-attendance__controls {
-    padding: 15px 20px;
-    gap: 15px;
-    border-radius: 12px;
-  }
-  .admin-attendance__toggle-buttons {
-    padding: 4px;
-    border-radius: 25px;
-  }
-  .admin-attendance__toggle-button {
-    padding: 9px 18px;
-    font-size: 0.9em;
-  }
-  .admin-attendance__total-count,
-  .admin-attendance__csv-export-button {
-    font-size: 1em;
-    padding: 10px 20px;
-    border-radius: 25px;
-  }
-  .admin-attendance__table {
-    min-width: 600px; /* Ensure scrollability */
-  }
-  .admin-attendance__table-header th,
-  .admin-attendance__table-data {
-    padding: 14px 20px;
-    font-size: 0.85em;
-  }
-  .admin-attendance__grid-view {
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
-    gap: 20px;
-  }
-  .admin-attendance__grid-card {
-    padding: 22px;
-    border-radius: 12px;
-  }
-  .admin-attendance__grid-item {
-    font-size: 0.9em;
-    gap: 10px;
-  }
-  .admin-attendance__grid-item-label {
-    min-width: 90px;
-  }
-  .admin-attendance__pagination {
-    margin-top: 30px;
-    padding: 12px 15px;
-    gap: 8px;
-  }
-  .admin-attendance__pagination-button {
-    padding: 8px 15px;
-    font-size: 0.9em;
-    min-width: 45px;
+    padding: 15px;
   }
 
-  /* Modal responsive adjustments */
+  .admin-attendance__table-container {
+    border-radius: 8px;
+  }
+
+  .admin-attendance__table {
+    min-width: 600px;
+  }
+
+  .admin-attendance__grid-view {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .admin-attendance__grid-card {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
   .admin-attendance__modal-content {
     padding: 30px;
-    border-radius: 16px;
+    border-radius: 12px;
   }
+
   .admin-attendance__modal-content h3 {
-    font-size: 2em;
-    margin-bottom: 25px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
   }
+
+  .admin-attendance__modal-body p {
+    font-size: 0.95em;
+  }
+
   .admin-attendance__modal-close-btn {
-    font-size: 2.5em;
+    font-size: 1.8em;
     top: 12px;
     right: 12px;
-  }
-  .admin-attendance__modal-body p {
-    flex-direction: column; /* Stack label and value */
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 1em;
-  }
-  .admin-attendance__modal-body strong {
-    min-width: unset; /* Remove fixed width */
   }
 }
 
 @media (max-width: 480px) {
   .admin-attendance {
-    padding: 15px;
-    margin: 15px auto;
-    border-radius: 10px;
-  }
-  .admin-attendance__heading {
-    font-size: 2em;
-    margin-bottom: 30px;
-  }
-  .admin-attendance__heading::after {
-    width: 70px;
-    height: 4px;
-    bottom: -12px;
-  }
-  .admin-attendance__controls {
-    padding: 10px 15px;
-    gap: 10px;
-    border-radius: 10px;
-  }
-  .admin-attendance__toggle-buttons {
-    flex-direction: column; /* Stack toggle buttons */
-    align-items: stretch;
-    padding: 3px;
-    border-radius: 15px;
-  }
-  .admin-attendance__toggle-button {
-    padding: 8px 12px;
-    font-size: 0.8em;
-    border-radius: 12px;
-    text-align: center;
-  }
-  .admin-attendance__total-count,
-  .admin-attendance__csv-export-button {
-    font-size: 0.9em;
-    padding: 8px 15px;
-    border-radius: 20px;
-  }
-  .admin-attendance__table {
-    min-width: 450px; /* Smallest practical width */
-  }
-  .admin-attendance__table-header th,
-  .admin-attendance__table-data {
-    padding: 10px 12px;
-    font-size: 0.8em;
-  }
-  .admin-attendance__grid-card {
-    padding: 18px;
-    border-radius: 10px;
-  }
-  .admin-attendance__grid-item {
-    font-size: 0.85em;
-    gap: 6px;
-  }
-  .admin-attendance__grid-item-label {
-    min-width: 70px;
-  }
-  .admin-attendance__pagination {
-    margin-top: 25px;
-    padding: 10px 12px;
-    gap: 5px;
-  }
-  .admin-attendance__pagination-button {
-    padding: 6px 10px;
-    font-size: 0.8em;
-    min-width: 35px;
+    padding: 10px;
+    margin: 10px auto;
   }
 
-  /* Modal responsive adjustments for very small screens */
-  .admin-attendance__modal-content {
-    padding: 20px;
-    border-radius: 12px;
+  .admin-attendance__controls {
+    padding: 10px;
   }
-  .admin-attendance__modal-content h3 {
-    font-size: 1.6em;
-    margin-bottom: 20px;
-  }
-  .admin-attendance__modal-close-btn {
-    font-size: 2em;
-    top: 8px;
-    right: 8px;
-  }
-  .admin-attendance__modal-body p {
+
+  .admin-attendance__toggle-button {
     font-size: 0.9em;
-    padding-bottom: 6px;
-    gap: 5px;
+    padding: 10px 15px;
+  }
+
+  .admin-attendance__csv-export-button {
+    font-size: 0.9em;
+    padding: 10px 18px;
+  }
+
+  .admin-attendance__total-count {
+    font-size: 1.1em;
+  }
+
+  .admin-attendance__table-heading,
+  .admin-attendance__table-data {
+    padding: 10px 12px;
+    font-size: 0.85em;
+  }
+
+  .admin-attendance__grid-view {
+    grid-template-columns: 1fr;
+    padding: 5px;
+  }
+
+  .admin-attendance__grid-card {
+    padding: 18px;
+    gap: 8px;
+  }
+
+  .admin-attendance__grid-item {
+    font-size: 0.9em;
+  }
+
+  .admin-attendance__modal-content {
+    padding: 25px;
+  }
+
+  .admin-attendance__modal-content h3 {
+    font-size: 1.3em;
+  }
+
+  .admin-attendance__modal-body p {
+    font-size: 0.88em;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-attendance__modal-body strong {
+    min-width: unset;
+  }
+}
+/* AdminAttendance.css */
+
+/* ... (previous golden theme styles) ... */
+
+/* Filter Input */
+.admin-attendance__filter-input {
+  padding: 10px 15px;
+  border: 1px solid var(--neutral-border);
+  border-radius: 8px;
+  font-size: 1em;
+  color: var(--gold-text);
+  background-color: var(--neutral-card-bg);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  flex-grow: 1; /* Allows it to take available space */
+  max-width: 300px; /* Limit its width if needed */
+}
+
+.admin-attendance__filter-input::placeholder {
+  color: #a09a8a; /* A subtle golden-brown for placeholder */
+}
+
+.admin-attendance__filter-input:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 3px var(--shadow-color-light); /* Soft glow on focus */
+}
+
+/* Adjustments for responsiveness of controls with filter */
+@media (max-width: 992px) {
+  .admin-attendance__filter-input {
+    width: 100%; /* Full width on smaller screens */
+    max-width: none; /* Remove max-width constraint */
+    margin-bottom: 15px; /* Add spacing below it */
+    order: 3; /* Position it below toggle buttons but before total count */
+  }
+
+  .admin-attendance__total-count {
+    order: 2; /* Position it after toggle buttons and filter */
+    margin-bottom: 15px;
+  }
+
+  .admin-attendance__csv-export-button {
+    order: 4; /* Move CSV button to the bottom */
   }
 }
