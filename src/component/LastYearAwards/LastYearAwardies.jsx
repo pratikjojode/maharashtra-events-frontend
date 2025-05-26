@@ -28,7 +28,7 @@ import TauheedMujawar from "../../assets/TouheedMujawar.jpg";
 import AshishJawake from "../../assets/AshishJawake.jpg";
 import DyaneshwarRao from "../../assets/DyaneshwarRao.jpg";
 import NileshUke from "../../assets/NileshUke.jpg";
-import ZahirAlam from "../../assets/ZahirAlam.jpg";
+import Zahir from "../../assets/Zahir.jpg";
 import AshutoshMisal from "../../assets/AshutoshMisal.jpg";
 import SudharshanSutar from "../../assets/SS.jpg";
 import PramodDastoorkar from "../../assets/Pramod.jpg";
@@ -121,7 +121,7 @@ const LastYearAwardees = () => {
     {
       name: "Dr. Zahir Alam",
       designation: "Thakur college of engineering",
-      image: ZahirAlam,
+      image: Zahir,
     },
     { name: "Dr. Ashutosh Misal", designation: "DYP", image: AshutoshMisal },
     { name: "Mr.Sudarshan Sutar", designation: "DYP", image: SudharshanSutar },
