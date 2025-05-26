@@ -119,8 +119,8 @@ const Hero = () => {
           >
             Nominate Now
           </a>
-          <a href="#categories" className="btn btn-secondary">
-            View Categories
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTSoYtTleWyn4DjXruwa7PkHxJiz98onKhEAI7Ff5BnDBTiQ/viewform" className="btn btn-secondary">
+            Join as Attendee
           </a>
         </div>
       </div>
