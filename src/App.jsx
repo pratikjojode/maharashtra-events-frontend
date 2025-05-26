@@ -18,28 +18,26 @@ import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 import "./index.css";
 import NotFound from "./pages/NotFound";
-//import Insights from "./pages/Insights";
+import AdminAttendance from "./admin/AdminAttendance";
 
 const SmoothScrollToTop = ({ children }) => {
   const { pathname } = useLocation();
   const animationRef = React.useRef(null);
 
   React.useEffect(() => {
-    // Disable browser's scroll restoration
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
 
     const smoothScroll = () => {
       const startPosition = window.scrollY;
-      const duration = 650; // milliseconds
+      const duration = 650;
       const startTime = performance.now();
 
       const animateScroll = (currentTime) => {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
 
-        // Physics-based easing (spring-like effect)
         const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
         const easedProgress = easeOutQuart(progress);
 
@@ -79,7 +77,6 @@ function App() {
     <Router>
       <SmoothScrollToTop>
         <Routes>
-          {/* Public Routes */}
           <Route path="/" element={<Home />} />
 
           <Route path="*" element={<NotFound />} />
@@ -91,10 +88,10 @@ function App() {
             element={<AdminLogin setIsAdmin={setIsAdmin} />}
           />
 
-          {/* Admin Routes */}
           {isAdmin ? (
             <Route path="/admin/dashboard" element={<AdminLayout />}>
               <Route index element={<AdminDashboard />} />
+              <Route path="attendancedashboard" element={<AdminAttendance />} />
             </Route>
           ) : (
             <Route

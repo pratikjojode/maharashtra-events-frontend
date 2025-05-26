@@ -26,6 +26,10 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
         <NavLink to="/admin/dashboard" onClick={closeSidebar}>
           <HiOutlineViewGrid className="icon" /> Dashboard
         </NavLink>
+        <NavLink to="attendancedashboard" onClick={closeSidebar}>
+          <HiOutlineViewGrid className="icon" /> Attendance Dashboard
+        </NavLink>
+
         <NavLink to="/" onClick={closeSidebar}>
           <HiOutlineHome className="icon" /> Home
         </NavLink>
