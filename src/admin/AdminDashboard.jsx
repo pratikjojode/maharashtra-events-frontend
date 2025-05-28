@@ -533,11 +533,11 @@ function AdminDashboard() {
                               marginRight: "10px",
                             }}
                           >
-                            {val /* show full URL, no truncation */}
+                            {val }
                           </a>
                         ) : (
                           <span>
-                            {String(val) /* show full text, no truncation */}
+                            {String(val) }
                           </span>
                         )}
 
