@@ -1,4 +1,3 @@
-// src/components/EventInfo.jsx
 import React, { useEffect, useState } from "react";
 import {
   FaCalendarAlt,
@@ -12,7 +11,8 @@ import {
 import "../../styles/EventInfo.css";
 
 const EventInfo = () => {
-  const eventDate = new Date("2025-06-07T18:30:00");
+  // UPDATED EVENT DATE: 28th June 2025, 6:30 PM
+  const eventDate = new Date("2025-06-28T18:30:00");
   const [timeLeft, setTimeLeft] = useState({});
   const [animate, setAnimate] = useState(false);
 
@@ -46,7 +46,7 @@ const EventInfo = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const formatTimeUnit = (value) => value < 10 ? `0${value}` : value;
+  const formatTimeUnit = (value) => (value < 10 ? `0${value}` : value);
 
   const calculateProgress = () => {
     const totalDuration = eventDate - new Date("2025-01-01T00:00:00");
@@ -55,23 +55,35 @@ const EventInfo = () => {
   };
 
   // Sharing functions remain exactly the same
-  const shareOnFacebook = () => window.open(
-    `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(eventDescription)}`,
-    "_blank", "width=600,height=400"
-  );
+  const shareOnFacebook = () =>
+    window.open(
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+        window.location.href
+      )}&quote=${encodeURIComponent(eventDescription)}`,
+      "_blank",
+      "width=600,height=400"
+    );
 
-  const shareOnTwitter = () => window.open(
-    `https://twitter.com/intent/tweet?text=${encodeURIComponent(eventName)}&url=${encodeURIComponent(window.location.href)}`,
-    "_blank", "width=600,height=400"
-  );
+  const shareOnTwitter = () =>
+    window.open(
+      `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+        eventName
+      )}&url=${encodeURIComponent(window.location.href)}`,
+      "_blank",
+      "width=600,height=400"
+    );
 
-  const shareOnWhatsapp = () => window.open(
-    `https://api.whatsapp.com/send?text=${encodeURIComponent(eventName + " - " + eventDescription + " " + window.location.href)}`,
-    "_blank"
-  );
+  const shareOnWhatsapp = () =>
+    window.open(
+      `https://api.whatsapp.com/send?text=${encodeURIComponent(
+        eventName + " - " + eventDescription + " " + window.location.href
+      )}`,
+      "_blank"
+    );
 
   const openInstagram = () => window.open(instagramPage, "_blank");
-  const openInMaps = () => window.open(`https://www.google.com/maps?q=${eventLatLng}`, "_blank");
+  const openInMaps = () =>
+    window.open(`https://www.google.com/maps?q=${eventLatLng}`, "_blank");
 
   const addToCalendar = () => {
     const startDate = eventDate.toISOString().replace(/-|:|\.\d+/g, "");
@@ -79,7 +91,11 @@ const EventInfo = () => {
       .toISOString()
       .replace(/-|:|\.\d+/g, "");
     window.open(
-      `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventName)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(eventLocation)}`,
+      `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+        eventName
+      )}&dates=${startDate}/${endDate}&details=${encodeURIComponent(
+        eventDescription
+      )}&location=${encodeURIComponent(eventLocation)}`,
       "_blank"
     );
   };
@@ -96,7 +112,7 @@ const EventInfo = () => {
                 <FaCalendarAlt className="info-icon" />
                 <div className="info-content">
                   <h3>Date & Time</h3>
-                  <p>7 June 2025, 6:30 PM</p>
+                  <p>28 June 2025, 6:30 PM</p>
                 </div>
               </div>
             </div>
@@ -108,7 +124,9 @@ const EventInfo = () => {
             <div className="countdown-timer">
               <div className="time-unit">
                 <div className={`time-card ${animate ? "flip" : ""}`}>
-                  <span className="time-value">{formatTimeUnit(timeLeft.days || 0)}</span>
+                  <span className="time-value">
+                    {formatTimeUnit(timeLeft.days || 0)}
+                  </span>
                 </div>
                 <span className="time-label">Days</span>
               </div>
@@ -116,7 +134,9 @@ const EventInfo = () => {
 
               <div className="time-unit">
                 <div className={`time-card ${animate ? "flip" : ""}`}>
-                  <span className="time-value">{formatTimeUnit(timeLeft.hours || 0)}</span>
+                  <span className="time-value">
+                    {formatTimeUnit(timeLeft.hours || 0)}
+                  </span>
                 </div>
                 <span className="time-label">Hours</span>
               </div>
@@ -124,7 +144,9 @@ const EventInfo = () => {
 
               <div className="time-unit">
                 <div className={`time-card ${animate ? "flip" : ""}`}>
-                  <span className="time-value">{formatTimeUnit(timeLeft.minutes || 0)}</span>
+                  <span className="time-value">
+                    {formatTimeUnit(timeLeft.minutes || 0)}
+                  </span>
                 </div>
                 <span className="time-label">Minutes</span>
               </div>
@@ -132,7 +154,9 @@ const EventInfo = () => {
 
               <div className="time-unit">
                 <div className={`time-card ${animate ? "flip" : ""}`}>
-                  <span className="time-value">{formatTimeUnit(timeLeft.seconds || 0)}</span>
+                  <span className="time-value">
+                    {formatTimeUnit(timeLeft.seconds || 0)}
+                  </span>
                 </div>
                 <span className="time-label">Seconds</span>
               </div>
@@ -140,9 +164,14 @@ const EventInfo = () => {
 
             <div className="progress-container">
               <div className="progress-bar">
-                <div className="progress-fill" style={{ width: `${calculateProgress()}%` }}></div>
+                <div
+                  className="progress-fill"
+                  style={{ width: `${calculateProgress()}%` }}
+                ></div>
               </div>
-              <p className="progress-text">TIME IS RUNNING OUT! RESERVE YOUR SPOT NOW</p>
+              <p className="progress-text">
+                TIME IS RUNNING OUT! RESERVE YOUR SPOT NOW
+              </p>
             </div>
           </div>
 
