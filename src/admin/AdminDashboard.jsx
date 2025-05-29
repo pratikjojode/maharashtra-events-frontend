@@ -11,7 +11,7 @@ import {
   FaChevronDown,
   FaEye,
   FaThLarge,
-  FaWhatsapp, // Import WhatsApp icon
+  FaWhatsapp,
 } from "react-icons/fa";
 import { Modal } from "antd";
 import "../styles/AdminDashboard.css";
@@ -165,14 +165,25 @@ function AdminDashboard() {
     );
   }, [responses, searchTerm]);
 
-  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const totalPages = Math.max(1, Math.ceil(filteredData.length / itemsPerPage));
   const paginatedData = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     return filteredData.slice(startIndex, startIndex + itemsPerPage);
   }, [filteredData, currentPage, itemsPerPage]);
 
+  // Reset to first page if searchTerm or itemsPerPage changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, itemsPerPage]);
+
+  // Clamp currentPage if totalPages decreases
+  useEffect(() => {
+    if (currentPage > totalPages) setCurrentPage(totalPages);
+  }, [totalPages, currentPage]);
+
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -533,12 +544,10 @@ function AdminDashboard() {
                               marginRight: "10px",
                             }}
                           >
-                            {val }
+                            {val}
                           </a>
                         ) : (
-                          <span>
-                            {String(val) }
-                          </span>
+                          <span>{String(val)}</span>
                         )}
 
                         {downloadLink && (
