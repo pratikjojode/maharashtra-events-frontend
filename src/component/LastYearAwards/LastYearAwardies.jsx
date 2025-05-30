@@ -58,7 +58,7 @@ const LastYearAwardees = () => {
     { name: "Dr. Santosh Borde", designation: "DY Patil", image: SantoshBorde },
     { name: "Mr.Anshul Sharma", designation: "MIT", image: AnshulSharma },
     { name: "Dr. Girish Desai", designation: "PCET", image: GirishDesai },
-    { name: "Dr.Shital Watile", designation: "IBMR", image: ShitalWatile },
+    { name: "Dr.Shital Watile", designation: "JCET ", image: ShitalWatile },
     {
       name: "Dr. Eknath Khedkar",
       designation: "DR. DY Patil School of management Ambi",
