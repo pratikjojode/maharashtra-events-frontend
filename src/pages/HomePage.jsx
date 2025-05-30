@@ -15,6 +15,7 @@ import "../App.css";
 import PreviousYearJobizzaa from "../component/PreviousYear/PreviousYearJobizzaa";
 import LastYearAwardees from "../component/LastYearAwards/LastYearAwardies";
 import TimelineSection from "../component/TimeLineSection/TimeLineSection";
+import SponsorLogos from "../component/SponsorLogos/SponsorLogos";
 const Home = () => {
   const animationRef = useRef(null);
 
@@ -66,6 +67,7 @@ const Home = () => {
       <EventInfo />
       <TimelineSection />
       <PreviousYearJobizzaa />
+      <SponsorLogos />
       <LastYearAwardees />
       <Overview />
       <ChiefGuest />

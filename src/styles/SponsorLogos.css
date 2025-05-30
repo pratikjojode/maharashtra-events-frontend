@@ -1,0 +1,110 @@
+.Sponsor-logo-title {
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 900;
+  margin-bottom: 36px;
+  color: #d4af37;
+  letter-spacing: 2px;
+  margin-top: 30px;
+
+  text-decoration: none;
+}
+
+.Sponsor-logo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0px auto;
+  justify-items: center;
+  align-items: stretch;
+  padding: 48px 0 56px 0;
+}
+
+.Sponsor-logo-item {
+  width: 320px;
+  aspect-ratio: 4 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff 70%, #f7e7b7 140%);
+  border-radius: 20px;
+  box-shadow: 0 3px 24px rgba(215, 194, 92, 0.11),
+    0 1px 12px rgba(180, 140, 15, 0.05);
+  padding: 20px;
+  border: 2px solid #eed97e;
+  transition: box-shadow 0.23s, transform 0.21s, border-color 0.22s;
+  overflow: hidden;
+  position: relative;
+}
+
+.Sponsor-logo-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  pointer-events: none;
+  border: 3px solid transparent;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 249, 196, 0.05) 0%,
+    rgba(255, 215, 0, 0.08) 100%
+  );
+  z-index: 1;
+}
+
+.Sponsor-logo-item:hover,
+.Sponsor-logo-item:focus-visible {
+  box-shadow: 0 12px 48px 0 rgba(180, 140, 15, 0.16), 0 0 48px 8px #ffe06655;
+  transform: scale(1.027) rotate(-0.3deg);
+  border-color: #fffbe6;
+}
+
+.Sponsor-logo-item img {
+  position: relative;
+  z-index: 2;
+  max-width: 86%;
+  max-height: 86%;
+  object-fit: contain;
+  filter: grayscale(0.04) brightness(1.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1px 8px #ffe06633;
+  transition: filter 0.18s, box-shadow 0.19s;
+}
+
+.Sponsor-logo-item:hover img {
+  filter: none;
+  box-shadow: 0 2px 16px #ffd70066;
+}
+
+/* Responsive grid */
+@media (max-width: 1024px) {
+  .Sponsor-logo-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 32px 0;
+  }
+  .Sponsor-logo-item {
+    width: 220px;
+    padding: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .Sponsor-logo-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .Sponsor-logo-item {
+    width: 90vw;
+    min-width: 0;
+    padding: 10px 5vw;
+  }
+  .Sponsor-logo-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
