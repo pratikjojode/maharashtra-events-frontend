@@ -3,9 +3,8 @@ import "../../styles/SponsorLogos.css";
 import sponsor_1 from "../../assets/sponsor_1.jpg";
 import sponsor_2 from "../../assets/sponor_2.jpg";
 import sponsor_4 from "../../assets/sponsor_4.png";
-import sponsor_5 from "../../assets/sponsor_5.jpg";
+import sponsor_5 from "../../assets/ajinkyadypu.jpg";
 import sponsor_6 from "../../assets/dypatil.jpg";
-
 import sponsor_7 from "../../assets/aims.png";
 
 const SponsorLogos = () => {
