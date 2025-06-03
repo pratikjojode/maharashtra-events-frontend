@@ -46,7 +46,7 @@ const LastYearAwardees = () => {
     { name: "Dr Ganesh Rao", designation: "PBS", image: GaneshRao },
     {
       name: "Dr.Sandeep Pachpande",
-      designation: "IBMR",
+      designation: "Chairman ASM Group of Institutes",
       image: SandeepPachpande,
     },
     {
@@ -58,10 +58,10 @@ const LastYearAwardees = () => {
     { name: "Dr. Santosh Borde", designation: "DY Patil", image: SantoshBorde },
     { name: "Mr.Anshul Sharma", designation: "MIT", image: AnshulSharma },
     { name: "Dr. Girish Desai", designation: "PCET", image: GirishDesai },
-    { name: "Dr.Shital Watile", designation: "JCET ", image: ShitalWatile },
+    { name: "Dr.Shital Watile", designation: "JCOET", image: ShitalWatile },
     {
       name: "Dr. Eknath Khedkar",
-      designation: "DR. DY Patil School of management Ambi",
+      designation: "DR. DY Patil School of management Lohegaon",
       image: EknathKhedkar,
     },
     {
@@ -74,12 +74,20 @@ const LastYearAwardees = () => {
       designation: "DY patil",
       image: AtulkumarJain,
     },
-    { name: "Dr. Mangesh Karad", designation: "MITADT", image: MangeshKarad },
-    { name: "Dr.Anita Diwakar", designation: "VJTI", image: AnitaDiwakar },
+    {
+      name: "Dr. Mangesh T. Karad",
+      designation: "MIT ADT",
+      image: MangeshKarad,
+    },
+    {
+      name: "Dr.Anita Sunil Diwakar",
+      designation: "VJTI",
+      image: AnitaDiwakar,
+    },
     { name: "Dr. Bharat Agarwal", designation: "VIT", image: BharatAgarwal },
     {
       name: "Dr. Ramakrishnan Raman",
-      designation: "SIBM",
+      designation: "Vice Chancellor",
       image: RamakrishnanRaman,
     },
     { name: "Dr. Suraj Sharma", designation: "RIMS", image: SurajSharma },
@@ -101,7 +109,7 @@ const LastYearAwardees = () => {
     },
     {
       name: "Dr. Tushar Ram Sangole",
-      designation: "JSPM",
+      designation: "Ajeenkya DYPU",
       image: TusharRamSangole,
     },
     { name: "Mr.Faisal Khan", designation: "DY Patil", image: FaisalKhan },
@@ -117,23 +125,35 @@ const LastYearAwardees = () => {
     },
     { name: "Mr. Ashish Jawake", designation: "DYP", image: AshishJawake },
     { name: "Mr. Dynaneshwar Rao", designation: "MIT", image: DyaneshwarRao },
-    { name: "Dr. Nilesh Uke", designation: "KJEI", image: NileshUke },
+    {
+      name: "Dr. Nilesh Uke",
+      designation: "Indira College of Engineering and Management",
+      image: NileshUke,
+    },
     {
       name: "Dr. Zahir Alam",
       designation: "Thakur college of engineering",
       image: Zahir,
     },
-    { name: "Dr. Ashutosh Misal", designation: "DYP", image: AshutoshMisal },
+    {
+      name: "Dr. Ashutosh Misal",
+      designation: "HR Trainer",
+      image: AshutoshMisal,
+    },
     { name: "Mr.Sudarshan Sutar", designation: "DYP", image: SudharshanSutar },
     {
       name: "Prof. Pramod Dastoorkar",
-      designation: "MIT",
+      designation: "MIT WPU",
       image: PramodDastoorkar,
     },
-    { name: "Dr. Sanjeev Wagh", designation: "KBPCOE", image: SanjeevWagh },
+    { name: "Dr. Sanjeev Wagh", designation: "GCE Karad", image: SanjeevWagh },
     { name: "Dr.Mahesh Goudar", designation: "DY Patil", image: MaheshGudar },
-    { name: "Ms. Minakshi Tyagi", designation: "DYP", image: MinakshiTyagi },
-    { name: "Dr.Shivajirao Kadam", designation: "MIT", image: ShivajiraoKadam },
+    { name: "Ms. Minakshi Tyagi", designation: "PCET", image: MinakshiTyagi },
+    {
+      name: "Dr.Shivajirao Kadam",
+      designation: "Bharati Vidyapeeth",
+      image: ShivajiraoKadam,
+    },
   ];
 
   const awardeesPerPage = 15;
