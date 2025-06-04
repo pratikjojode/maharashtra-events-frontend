@@ -54,7 +54,8 @@ const Footer = () => {
             </p>
             <p>
               <a href="mailto:gaurav@jobizza.com">
-                <FaEnvelope className="footer-icon" /> info@maharashtraeducationawards.com
+                <FaEnvelope className="footer-icon" />{" "}
+                info@maharashtraeducationawards.com
               </a>
             </p>
           </div>
@@ -65,24 +66,19 @@ const Footer = () => {
             All rights reserved.
           </p>
           <div className="social-links">
-            <a
-             href=""
-             target="_blank"
-             rel="noopener noreferrer"
-            >
+            <a href="" target="_blank" rel="noopener noreferrer">
               <FaFacebook />
-              </a>
+            </a>
             <a
-             href="https://www.instagram.com/maharashtraeducationawards/"
-             target="_blank"
-             rel="noopener noreferrer"
+              href="https://www.instagram.com/maharashtraeducationawards/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaInstagram />
-              </a>
-            
-                
+            </a>
+
             <a href="https://www.youtube.com/@gauravsharmajobizza2433">
-              <FaYoutube/>
+              <FaYoutube />
             </a>
             <Link to="/admin-login" />
           </div>
