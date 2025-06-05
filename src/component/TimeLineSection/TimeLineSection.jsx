@@ -21,7 +21,7 @@ const TimelineSection = () => {
             </div>
             <div className="timeline-content">
               <h3>Nomination Deadline</h3>
-              <div className="date">20 May 2025</div>
+              <div className="date">18 June 2025</div>
               <p>
                 Last day to submit your nominations for the Maharashtra
                 Education Icon Awards
@@ -42,7 +42,7 @@ const TimelineSection = () => {
             </div>
             <div className="timeline-content">
               <h3>Judgment Process Begins</h3>
-              <div className="date">25 May 2025</div>
+              <div className="date">19 June 2025</div>
               <p>Our panel of experts will begin evaluating all nominations</p>
             </div>
           </div>
