@@ -18,12 +18,4 @@
     <loc>https://maharashtraeducationawards.com/ourInsights</loc>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://maharashtraeducationawards.com/admin-login</loc>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://maharashtraeducationawards.com/admin/dashboard</loc>
-    <priority>0.3</priority>
-  </url>
 </urlset>
