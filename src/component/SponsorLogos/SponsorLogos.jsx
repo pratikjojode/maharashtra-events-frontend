@@ -4,10 +4,10 @@ import sponsor_1 from "../../assets/sponsor_1.jpg";
 import sponsor_2 from "../../assets/sponor_2.jpg";
 import sponsor_4 from "../../assets/sponsor_4.png";
 import sponsor_5 from "../../assets/ajinkyadypu.jpg";
-import sponsor_6 from "../../assets/dypatil.jpg";
 import sponsor_7 from "../../assets/aims.png";
 import sponsor_8 from "../../assets/ESTD.png";
 import AiLogo from "../../assets/Partner.jpg";
+import sponsor_6 from "../../assets/image.png";
 import sponsor_9 from "../../assets/jagdamba.jpg";
 
 const SponsorLogos = () => {
@@ -47,7 +47,7 @@ const SponsorLogos = () => {
         <div className="Sponsor-logo-item">
           <img src={AiLogo} alt="Sponsor 8" />
           <p>AI Partner</p>
-        </div>  
+        </div>
       </div>
     </>
   );
