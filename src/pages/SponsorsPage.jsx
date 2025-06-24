@@ -77,7 +77,7 @@ const SponsorsPage = () => {
                     <li><span className="benefit-icon"><FaTable /></span>Premium Exhibition Stall</li>
                     <li><span className="benefit-icon"><FaUsers /></span>8 VIP Delegates Access</li>
                     <li><span className="benefit-icon"><FaImage /></span>01 Custom Branded Standee</li>
-                    <li><span className="benefit-icon"><FaBookOpen /></span>Full Page Color Ad (Prime Position)</li>
+                    
                   </ul>
                 </div>
                 <div className="card-footer">
@@ -103,7 +103,7 @@ const SponsorsPage = () => {
                     <li><span className="benefit-icon"><FaTable /></span>Featured Exhibition Stall</li>
                     <li><span className="benefit-icon"><FaUsers /></span>6 Distinguished Delegates</li>
                     <li><span className="benefit-icon"><FaImage /></span>01 Branded Standee</li>
-                    <li><span className="benefit-icon"><FaBookOpen /></span>Full Page Color Ad (Inside)</li>
+                    
                   </ul>
                 </div>
                 <div className="card-footer">
@@ -129,7 +129,7 @@ const SponsorsPage = () => {
                     <li><span className="benefit-icon"><FaTable /></span>Standard Exhibition Stall</li>
                     <li><span className="benefit-icon"><FaUsers /></span>5 Delegate Passes</li>
                     <li><span className="benefit-icon"><FaImage /></span>01 Branded Standee</li>
-                    <li><span className="benefit-icon"><FaBookOpen /></span>Full Page Color Ad (Inside)</li>
+                    
                   </ul>
                 </div>
                 <div className="card-footer">
@@ -155,7 +155,7 @@ const SponsorsPage = () => {
                     <li><span className="benefit-icon"><FaTable /></span>Dedicated Exhibition Stall</li>
                     <li><span className="benefit-icon"><FaUsers /></span>4 Delegate Passes</li>
                     <li><span className="benefit-icon"><FaImage /></span>01 Branded Standee</li>
-                    <li><span className="benefit-icon"><FaBookOpen /></span>Full Page B/W Advertisement</li>
+                    
                   </ul>
                 </div>
                 <div className="card-footer">
@@ -184,7 +184,7 @@ const SponsorsPage = () => {
                       <li><FaCheck className="icon-check" /> Compact Exhibition Stall</li>
                       <li>No Delegate Passes</li>
                       <li>01 Branded Standee</li>
-                      <li>Full Page B/W Advertisement</li>
+                      
                     </ul>
                   </div>
                 </div>
@@ -204,7 +204,7 @@ const SponsorsPage = () => {
                       <li><FaCheck className="icon-check" /> Standard Exhibition Stall</li>
                       <li>No Delegate Passes</li>
                       <li>01 Branded Standee</li>
-                      <li>Full Page B/W Advertisement</li>
+                      
                     </ul>
                   </div>
                 </div>
@@ -224,7 +224,7 @@ const SponsorsPage = () => {
                       <li><FaCheck className="icon-check" /> Premium Exhibition Stall</li>
                       <li>Special Dinner Recognition</li>
                       <li>01 Premium Standee</li>
-                      <li>Full Page Color Ad (Inside)</li>
+                      
                     </ul>
                   </div>
                 </div>
