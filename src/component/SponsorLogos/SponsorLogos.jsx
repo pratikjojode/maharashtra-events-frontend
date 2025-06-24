@@ -16,6 +16,15 @@ const SponsorLogos = () => {
   return (
     <>
       <h3 className="Sponsor-logo-title">Proud Sponsors</h3>
+      {/* Title Partner Section */}
+      <div className="Title-partner-container">
+        <div className="Sponsor-logo-item">
+          <img src={sponsor_11} alt="Sponsor 11" />
+          <p>Title Partner</p>
+        </div>
+      </div>
+
+      {/* Other Sponsors Section */}
       <div className="Sponsor-logo-container">
         <div className="Sponsor-logo-item">
           <img src={sponsor_1} alt="Sponsor 1" />
@@ -54,10 +63,7 @@ const SponsorLogos = () => {
           <img src={sponsor_10} alt="Sponsor 10" />
           <p>Technology Partner</p>
         </div>
-        <div className="Sponsor-logo-item">
-          <img src={sponsor_11} alt="Sponsor 11" />
-          <p>Title Partner</p>
-        </div>
+        
         <div className="Sponsor-logo-item">
           <img src={sponsor_9} alt="Sponsor 9" />
           <p>Academic Partner</p>

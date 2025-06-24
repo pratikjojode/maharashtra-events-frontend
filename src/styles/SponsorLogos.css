@@ -32,6 +32,14 @@
   }
 }
 
+/* New style for the Title Partner container */
+.Title-partner-container {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  margin-bottom: 3.5rem; /* Space between title partner and other sponsors */
+  padding: 0 2rem; /* Maintain padding */
+}
+
 .Sponsor-logo-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -121,6 +129,10 @@
   .Sponsor-logo-item img {
     height: 100px;
   }
+
+  .Title-partner-container {
+    margin-bottom: 2.5rem; /* Adjust margin for smaller screens */
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -130,5 +142,9 @@
 
   .Sponsor-logo-item p {
     font-size: 0.9rem;
+  }
+
+  .Title-partner-container {
+    margin-bottom: 2rem; /* Adjust margin for smallest screens */
   }
 }
