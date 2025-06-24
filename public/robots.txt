@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /admin-login
 Allow: /
 Allow: /assets/logo.png
 Sitemap: http://maharashtraeducationawards.com/sitemap.xml
