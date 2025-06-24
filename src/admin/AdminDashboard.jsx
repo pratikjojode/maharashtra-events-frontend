@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 import { Modal } from "antd";
 import "../styles/AdminDashboard.css";
-import { exportToCSV } from "../../src/utils/exportUtils";
+import { exportToCSV } from "../../../backend/utils/exportUtils";
 
 function AdminDashboard() {
   const [responses, setResponses] = useState([]);
