@@ -9,6 +9,8 @@ import sponsor_8 from "../../assets/ESTD.png";
 import AiLogo from "../../assets/Partner.jpg";
 import sponsor_6 from "../../assets/image.png";
 import sponsor_9 from "../../assets/jagdamba.jpg";
+import sponsor_10 from "../../assets/berirboot.png";
+import sponsor_11 from "../../assets/pune.png";
 
 const SponsorLogos = () => {
   return (
@@ -47,6 +49,18 @@ const SponsorLogos = () => {
         <div className="Sponsor-logo-item">
           <img src={AiLogo} alt="Sponsor 8" />
           <p>AI Partner</p>
+        </div>
+        <div className="Sponsor-logo-item">
+          <img src={sponsor_10} alt="Sponsor 10" />
+          <p>Training Partner</p>
+        </div>
+        <div className="Sponsor-logo-item">
+          <img src={sponsor_11} alt="Sponsor 11" />
+          <p>Title Partner</p>
+        </div>
+        <div className="Sponsor-logo-item">
+          <img src={sponsor_9} alt="Sponsor 9" />
+          <p>Academic Partner</p>
         </div>
       </div>
     </>
