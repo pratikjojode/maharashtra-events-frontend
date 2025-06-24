@@ -52,7 +52,7 @@ const SponsorLogos = () => {
         </div>
         <div className="Sponsor-logo-item">
           <img src={sponsor_10} alt="Sponsor 10" />
-          <p>Training Partner</p>
+          <p>Technology Partner</p>
         </div>
         <div className="Sponsor-logo-item">
           <img src={sponsor_11} alt="Sponsor 11" />

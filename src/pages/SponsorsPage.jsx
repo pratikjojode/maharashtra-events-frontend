@@ -15,7 +15,7 @@ import {
   FaUsers,
   FaVideo,
   FaImage,
-  FaBookOpen
+  FaBookOpen,
 } from "react-icons/fa";
 import "../styles/SponsorsPage.css";
 import Navbar from "../component/Header/Navbar.jsx";
@@ -48,8 +48,9 @@ const SponsorsPage = () => {
             <h2>Sponsorship Opportunities</h2>
             <div className="header-divider"></div>
             <p className="section-subtitle">
-              Join us in celebrating educational excellence and gain unparalleled visibility among
-              Maharashtra's elite educators and educational institutions
+              Join us in celebrating educational excellence and gain
+              unparalleled visibility among Maharashtra's elite educators and
+              educational institutions
             </p>
           </div>
 
@@ -72,12 +73,36 @@ const SponsorsPage = () => {
                 </div>
                 <div className="card-body">
                   <ul className="benefits-list">
-                    <li><span className="benefit-icon"><FaImage /></span>Premium Logo Placement</li>
-                    <li><span className="benefit-icon"><FaVideo /></span>Exclusive Video Presentation</li>
-                    <li><span className="benefit-icon"><FaTable /></span>Premium Exhibition Stall</li>
-                    <li><span className="benefit-icon"><FaUsers /></span>8 VIP Delegates Access</li>
-                    <li><span className="benefit-icon"><FaImage /></span>01 Custom Branded Standee</li>
-                    
+                    <li>
+                      <span className="benefit-icon">
+                        <FaImage />
+                      </span>
+                      Premium Logo Placement
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaVideo />
+                      </span>
+                      Exclusive Video Presentation
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaTable />
+                      </span>
+                      Premium Exhibition Stall
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaUsers />
+                      </span>
+                      8 VIP Delegates Access
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaImage />
+                      </span>
+                      01 Custom Branded Standee
+                    </li>
                   </ul>
                 </div>
                 <div className="card-footer">
@@ -98,12 +123,36 @@ const SponsorsPage = () => {
                 </div>
                 <div className="card-body">
                   <ul className="benefits-list">
-                    <li><span className="benefit-icon"><FaImage /></span>Featured Logo Placement</li>
-                    <li><span className="benefit-icon"><FaVideo /></span>Extended Video Placement</li>
-                    <li><span className="benefit-icon"><FaTable /></span>Featured Exhibition Stall</li>
-                    <li><span className="benefit-icon"><FaUsers /></span>6 Distinguished Delegates</li>
-                    <li><span className="benefit-icon"><FaImage /></span>01 Branded Standee</li>
-                    
+                    <li>
+                      <span className="benefit-icon">
+                        <FaImage />
+                      </span>
+                      Featured Logo Placement
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaVideo />
+                      </span>
+                      Extended Video Placement
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaTable />
+                      </span>
+                      Featured Exhibition Stall
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaUsers />
+                      </span>
+                      6 Distinguished Delegates
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaImage />
+                      </span>
+                      01 Branded Standee
+                    </li>
                   </ul>
                 </div>
                 <div className="card-footer">
@@ -124,12 +173,36 @@ const SponsorsPage = () => {
                 </div>
                 <div className="card-body">
                   <ul className="benefits-list">
-                    <li><span className="benefit-icon"><FaImage /></span>Prominent Logo Placement</li>
-                    <li><span className="benefit-icon"><FaVideo /></span>Standard Video Placement</li>
-                    <li><span className="benefit-icon"><FaTable /></span>Standard Exhibition Stall</li>
-                    <li><span className="benefit-icon"><FaUsers /></span>5 Delegate Passes</li>
-                    <li><span className="benefit-icon"><FaImage /></span>01 Branded Standee</li>
-                    
+                    <li>
+                      <span className="benefit-icon">
+                        <FaImage />
+                      </span>
+                      Prominent Logo Placement
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaVideo />
+                      </span>
+                      Standard Video Placement
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaTable />
+                      </span>
+                      Standard Exhibition Stall
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaUsers />
+                      </span>
+                      5 Delegate Passes
+                    </li>
+                    <li>
+                      <span className="benefit-icon">
+                        <FaImage />
+                      </span>
+                      01 Branded Standee
+                    </li>
                   </ul>
                 </div>
                 <div className="card-footer">
@@ -138,7 +211,7 @@ const SponsorsPage = () => {
               </div>
 
               {/* Academic Partner */}
-              <div className="sponsorship-card bronze-card">
+              {/* <div className="sponsorship-card bronze-card">
                 <div className="card-header">
                   <div className="tier-icon-wrapper">
                     <FaAward className="tier-icon" />
@@ -161,16 +234,16 @@ const SponsorsPage = () => {
                 <div className="card-footer">
                   <button className="btn-view-details">View Details</button>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="additional-tiers">
-              <h3 className="tier-header">
+              {/* <h3 className="tier-header">
                 <span className="tier-text">Specialized</span> Sponsorships
-              </h3>
+              </h3> */}
               <div className="sponsorship-grid secondary-grid">
                 {/* Kit Sponsor */}
-                <div className="sponsorship-card secondary-card">
+                {/* <div className="sponsorship-card secondary-card">
                   <div className="card-header">
                     <h4>Kit Sponsor</h4>
                     <div className="investment">
@@ -187,10 +260,10 @@ const SponsorsPage = () => {
                       
                     </ul>
                   </div>
-                </div>
-                
+                </div> */}
+
                 {/* Associate Sponsor */}
-                <div className="sponsorship-card secondary-card">
+                {/* <div className="sponsorship-card secondary-card">
                   <div className="card-header">
                     <h4>Associate Sponsor</h4>
                     <div className="investment">
@@ -199,18 +272,25 @@ const SponsorsPage = () => {
                   </div>
                   <div className="card-body">
                     <ul className="benefits-list compact">
-                      <li><FaCheck className="icon-check" /> Standard Logo Placement</li>
-                      <li><FaTimes className="icon-times" /> No Video Showcase</li>
-                      <li><FaCheck className="icon-check" /> Standard Exhibition Stall</li>
+                      <li>
+                        <FaCheck className="icon-check" /> Standard Logo
+                        Placement
+                      </li>
+                      <li>
+                        <FaTimes className="icon-times" /> No Video Showcase
+                      </li>
+                      <li>
+                        <FaCheck className="icon-check" /> Standard Exhibition
+                        Stall
+                      </li>
                       <li>No Delegate Passes</li>
                       <li>01 Branded Standee</li>
-                      
                     </ul>
                   </div>
-                </div>
-                
+                </div> */}
+
                 {/* Dinner Sponsor */}
-                <div className="sponsorship-card secondary-card dinner-card">
+                {/* <div className="sponsorship-card secondary-card dinner-card">
                   <div className="card-header">
                     <h4>Dinner Sponsor</h4>
                     <div className="investment">
@@ -219,22 +299,31 @@ const SponsorsPage = () => {
                   </div>
                   <div className="card-body">
                     <ul className="benefits-list compact">
-                      <li><FaCheck className="icon-check" /> Exclusive Dinner Branding</li>
-                      <li><FaTimes className="icon-times" /> No Video Showcase</li>
-                      <li><FaCheck className="icon-check" /> Premium Exhibition Stall</li>
+                      <li>
+                        <FaCheck className="icon-check" /> Exclusive Dinner
+                        Branding
+                      </li>
+                      <li>
+                        <FaTimes className="icon-times" /> No Video Showcase
+                      </li>
+                      <li>
+                        <FaCheck className="icon-check" /> Premium Exhibition
+                        Stall
+                      </li>
                       <li>Special Dinner Recognition</li>
                       <li>01 Premium Standee</li>
-                      
                     </ul>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
             <div className="other-sponsorships">
               <h3>
                 <span className="category-text">Category</span> Sponsorships
-                <span className="price-tag"><FaRupeeSign className="rupee-icon" /> 2 Lakhs Each</span>
+                <span className="price-tag">
+                  <FaRupeeSign className="rupee-icon" /> 2 Lakhs Each
+                </span>
               </h3>
               <div className="sponsor-categories">
                 <div className="category-card">
@@ -327,7 +416,10 @@ const SponsorsPage = () => {
                 <div className="contact-content">
                   {activeTab === "email" ? (
                     <div className="email-content">
-                      <p>Reach out to us with your sponsorship inquiries and secure your spot today!</p>
+                      <p>
+                        Reach out to us with your sponsorship inquiries and
+                        secure your spot today!
+                      </p>
                       <button
                         onClick={handleEmailClick}
                         className="btn btn-contact"
@@ -337,7 +429,10 @@ const SponsorsPage = () => {
                     </div>
                   ) : (
                     <div className="phone-content">
-                      <p>Speak directly with our sponsorship team for personalized assistance</p>
+                      <p>
+                        Speak directly with our sponsorship team for
+                        personalized assistance
+                      </p>
                       <button
                         onClick={handlePhoneClick}
                         className="btn btn-contact"
