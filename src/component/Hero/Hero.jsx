@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Carousel } from "antd";
 import "../../styles/Hero.css";
-import heroBg1 from "../../assets/hero-bgg3.jpg";
-import heroBg2 from "../../assets/hero-bg3.jpg";
+import heroBg1 from "../../assets/Image1.jpg";
+import heroBg2 from "../../assets/Image2.jpg";
 import jobizzaLogo from "../../assets/jobizza-logo.png";
 import anytimeBarterLogo from "../../assets/anytime-barter-logo.png";
 import { FaAward } from "react-icons/fa";

@@ -11,7 +11,7 @@ import Footer from "../component/Footer/Footer";
 import Navbar from "../component/Header/Navbar";
 import "../index.css";
 import "../App.css";
-
+import CurrentAwardees from "../component/CurrentYear/CurrentAwardees";
 import PreviousYearJobizzaa from "../component/PreviousYear/PreviousYearJobizzaa";
 import LastYearAwardees from "../component/LastYearAwards/LastYearAwardies";
 import TimelineSection from "../component/TimeLineSection/TimeLineSection";
@@ -66,6 +66,7 @@ const Home = () => {
       <Hero />
       <EventInfo />
       <TimelineSection />
+      <CurrentAwardees />
       <PreviousYearJobizzaa />
       <SponsorLogos />
       <LastYearAwardees />
