@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Carousel } from "antd";
 import "../../styles/Hero.css";
-import heroBg1 from "../../assets/Image1.jpg";
-import heroBg2 from "../../assets/Image2.jpg";
+import heroBg1 from "../../assets/Picture1.jpg";
+import heroBg2 from "../../assets/Picture3.jpg";
+import heroBg3 from "../../assets/Picture7.jpg";
+import heroBg4 from "../../assets/Picture10.jpg";
+import heroBg5 from "../../assets/Picture9.jpg";
 import jobizzaLogo from "../../assets/jobizza-logo.png";
 import anytimeBarterLogo from "../../assets/anytime-barter-logo.png";
 import { FaAward } from "react-icons/fa";
 
 const Hero = () => {
-  const heroImages = [heroBg1, heroBg2];
+  const heroImages = [heroBg1, heroBg2, heroBg3, heroBg4, heroBg5];
   const [isFlipped, setIsFlipped] = useState(false);
   const [initialFlipDone, setInitialFlipDone] = useState(false);
 

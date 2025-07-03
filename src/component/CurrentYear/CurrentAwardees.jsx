@@ -107,13 +107,13 @@ const CurrentAwardees = () => {
       imageUrl: Best_team_award_training_and_development,
       description: "For exceptional performance in training and development.",
     },
-    {
-      id: 11,
-      name: "Dr. Ashish Lambat",
-      award: " The research excellence award",
-      imageUrl: Dr_ashish_lambat_award,
-      description: "Recognizing outstanding contributions to academic research.",
-    },
+    // {
+    //   id: 11,
+    //   name: "Dr. Ashish Lambat",
+    //   award: " The research excellence award",
+    //   imageUrl: Dr_ashish_lambat_award,
+    //   description: "Recognizing outstanding contributions to academic research.",
+    // },
     {
       id: 12,
       name: "Dr. Chetan Chaudhari",
@@ -121,13 +121,13 @@ const CurrentAwardees = () => {
       imageUrl: Dr_Chetan_Chaudhari_Awards,
       description: "Honoring extensive and impactful service to the institution.",
     },
-    {
-      id: 13,
-      name: "Dr. Nidhi Amit Medhekar",
-      award: " Excellence in educational research award",
-      imageUrl: Dr_Nidhi_Amit_Medhekar_Awards,
-      description: "Recognizing research with significant societal impact.",
-    },
+    // {
+    //   id: 13,
+    //   name: "Dr. Nidhi Amit Medhekar",
+    //   award: " Excellence in educational research award",
+    //   imageUrl: Dr_Nidhi_Amit_Medhekar_Awards,
+    //   description: "Recognizing research with significant societal impact.",
+    // },
     {
       id: 14,
       name: "Dr. Shittal Watile",
@@ -214,7 +214,7 @@ const CurrentAwardees = () => {
     },
     {
       id: 26,
-      name: "Madhuri Khambete", 
+      name: "Madhuri Khambete",
       award: "Exemplary Leadership in Engineering Education",
       imageUrl: Madhuri_Khambete_Awards,
       description: "For outstanding leadership in engineering education and research.",
@@ -262,21 +262,21 @@ const CurrentAwardees = () => {
           {currentAwardeeData.map((item) => (
             <div key={item.id}>
               <Card
-                className="awardee-card"
+                className="current-awardee-card" // Changed class name
                 cover={
-                  <div className="image-container">
+                  <div className="current-awardee-image-container"> {/* Changed class name */}
                     <img
                       alt={item.name}
                       src={item.imageUrl}
-                      className="card-image"
+                      className="current-awardee-card-image" // Changed class name
                     />
                   </div>
                 }
               >
-                <div className="card-content">
-                  <h3 className="card-awardee-name">{item.name}</h3>
-                  <h4 className="card-award-title">{item.award}</h4>
-                  <p className="card-description">{item.description}</p>
+                <div className="current-awardee-card-content"> {/* Changed class name */}
+                  <h3 className="current-awardee-card-name">{item.name}</h3> {/* Changed class name */}
+                  <h4 className="current-awardee-card-award-title">{item.award}</h4> {/* Changed class name */}
+                  <p className="current-awardee-card-description">{item.description}</p> {/* Changed class name */}
                 </div>
               </Card>
             </div>

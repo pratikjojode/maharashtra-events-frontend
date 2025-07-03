@@ -64,7 +64,7 @@ const Home = () => {
     <div className="home-page">
       <Navbar />
       <Hero />
-      <EventInfo />
+      {/* <EventInfo /> */}
       <TimelineSection />
       <CurrentAwardees />
       <PreviousYearJobizzaa />
