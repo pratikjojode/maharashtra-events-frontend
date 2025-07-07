@@ -42,14 +42,16 @@ const CurrentAwardees = () => {
       name: "Prof. Sunita Venkat",
       award: " Remarkable achievements in academic leadership",
       imageUrl: Prof_Sunita_Venkat_Awards,
-      description: "Recognized for outstanding contributions to academic research.",
+      description:
+        "Recognized for outstanding contributions to academic research.",
     },
     {
       id: 2,
       name: "Prof. Anil Kashyap",
       award: " Academic leadership award construction management",
       imageUrl: Prof_Anil_Kashyap_Awards,
-      description: "For exceptional contributions to construction management education.",
+      description:
+        "For exceptional contributions to construction management education.",
     },
     {
       id: 3,
@@ -84,7 +86,8 @@ const CurrentAwardees = () => {
       name: "Somnath Patil",
       award: " Academic leadership award rising star",
       imageUrl: Somnath_Patil_Awards,
-      description: "For exceptional contributions to academic leadership and innovation.",
+      description:
+        "For exceptional contributions to academic leadership and innovation.",
     },
     {
       id: 8,
@@ -107,27 +110,29 @@ const CurrentAwardees = () => {
       imageUrl: Best_team_award_training_and_development,
       description: "For exceptional performance in training and development.",
     },
-    // {
-    //   id: 11,
-    //   name: "Dr. Ashish Lambat",
-    //   award: " The research excellence award",
-    //   imageUrl: Dr_ashish_lambat_award,
-    //   description: "Recognizing outstanding contributions to academic research.",
-    // },
+    {
+      id: 11,
+      name: "Dr. Ashish Lambat",
+      award: " The research excellence award",
+      imageUrl: Dr_ashish_lambat_award,
+      description:
+        "Recognizing outstanding contributions to academic research.",
+    },
     {
       id: 12,
       name: "Dr. Chetan Chaudhari",
       award: " Academic director of the Year award",
       imageUrl: Dr_Chetan_Chaudhari_Awards,
-      description: "Honoring extensive and impactful service to the institution.",
+      description:
+        "Honoring extensive and impactful service to the institution.",
     },
-    // {
-    //   id: 13,
-    //   name: "Dr. Nidhi Amit Medhekar",
-    //   award: " Excellence in educational research award",
-    //   imageUrl: Dr_Nidhi_Amit_Medhekar_Awards,
-    //   description: "Recognizing research with significant societal impact.",
-    // },
+    {
+      id: 13,
+      name: "Dr. Nidhi Amit Medhekar",
+      award: " Excellence in educational research award",
+      imageUrl: Dr_Nidhi_Amit_Medhekar_Awards,
+      description: "Recognizing research with significant societal impact.",
+    },
     {
       id: 14,
       name: "Dr. Shittal Watile",
@@ -140,56 +145,64 @@ const CurrentAwardees = () => {
       name: "Dr. Sunil Brijmohan Kapoor",
       award: " Academic visionary award",
       imageUrl: Dr_Sunil_Brijmohan_Kapoor_award,
-      description: "For visionary contributions to the future of education and academic leadership.",
+      description:
+        "For visionary contributions to the future of education and academic leadership.",
     },
     {
       id: 16,
       name: "Dr. Sushil Raut",
       award: " Young achiever award in Academy and research",
       imageUrl: Dr_Sushil_Raut,
-      description: "For outstanding achievements in academic research at a young age.",
+      description:
+        "For outstanding achievements in academic research at a young age.",
     },
     {
       id: 17,
       name: "Dr. Girish Desai",
       award: " Academic leadership award visionary",
       imageUrl: Dr_Girish_Desai_Awards,
-      description: "For visionary leadership in academic innovation and excellence.",
+      description:
+        "For visionary leadership in academic innovation and excellence.",
     },
     {
       id: 18,
       name: "Dr. Kamaljeet Kaur",
       award: " Stellar achievements that illuminate academia",
       imageUrl: Dr_Kamaljeet_Kaur_Awards,
-      description: "For exceptional contributions that have significantly advanced academic excellence.",
+      description:
+        "For exceptional contributions that have significantly advanced academic excellence.",
     },
     {
       id: 19,
       name: "Dr. Sunil Bhirud",
       award: " Academic leadership award governance",
       imageUrl: Dr_Sunil_Bhirud_Awards,
-      description: "For exceptional leadership in academic governance and administration.",
+      description:
+        "For exceptional leadership in academic governance and administration.",
     },
     {
       id: 20,
       name: "DY Patil Bussiness School",
       award: " Young visionary institution award",
       imageUrl: DY_Patil_Bussiness_School_award,
-      description: "For innovative approaches in business education and student development.",
+      description:
+        "For innovative approaches in business education and student development.",
     },
     {
       id: 21,
       name: "Ganesh Kakandikar",
       award: " Award for shaping futures",
       imageUrl: Ganesh_Kakandikar_Awards,
-      description: "For exceptional contributions to shaping the future of education.",
+      description:
+        "For exceptional contributions to shaping the future of education.",
     },
     {
       id: 22,
       name: "Ganesh Shirsath",
       award: " Abroad Educational Visionary award",
       imageUrl: Ganesh_Shirsath_award,
-      description: "For visionary contributions to international education and student mobility.",
+      description:
+        "For visionary contributions to international education and student mobility.",
     },
     {
       id: 23,
@@ -210,28 +223,31 @@ const CurrentAwardees = () => {
       name: "Jitendra Sharma",
       award: "Legacy Leader in Global Academia Award",
       imageUrl: Jitendra_Sharma_award,
-      description: "For significant contributions to global academic leadership and collaboration.",
+      description:
+        "For significant contributions to global academic leadership and collaboration.",
     },
     {
       id: 26,
       name: "Madhuri Khambete",
       award: "Exemplary Leadership in Engineering Education",
       imageUrl: Madhuri_Khambete_Awards,
-      description: "For outstanding leadership in engineering education and research.",
+      description:
+        "For outstanding leadership in engineering education and research.",
     },
     {
       id: 27,
       name: "Mr. Sanjeev Bajaj",
       award: "Academic Leadership Award Security Management",
       imageUrl: Mr_Sanjeev_Bajaj_Awards,
-      description: "Recognizing leadership in security management education and research.",
+      description:
+        "Recognizing leadership in security management education and research.",
     },
     {
       id: 28,
       name: "Niraj Vyawahare",
       award: "Academic Leadership Award Pharmacy",
       imageUrl: Niraj_Vyawahare_Awards,
-        description: "Recognizing leadership in pharmacy education and research.",
+      description: "Recognizing leadership in pharmacy education and research.",
     },
   ];
 
@@ -264,7 +280,9 @@ const CurrentAwardees = () => {
               <Card
                 className="current-awardee-card" // Changed class name
                 cover={
-                  <div className="current-awardee-image-container"> {/* Changed class name */}
+                  <div className="current-awardee-image-container">
+                    {" "}
+                    {/* Changed class name */}
                     <img
                       alt={item.name}
                       src={item.imageUrl}
@@ -273,10 +291,21 @@ const CurrentAwardees = () => {
                   </div>
                 }
               >
-                <div className="current-awardee-card-content"> {/* Changed class name */}
-                  <h3 className="current-awardee-card-name">{item.name}</h3> {/* Changed class name */}
-                  <h4 className="current-awardee-card-award-title">{item.award}</h4> {/* Changed class name */}
-                  <p className="current-awardee-card-description">{item.description}</p> {/* Changed class name */}
+                <div className="current-awardee-card-content">
+                  {" "}
+                  {/* Changed class name */}
+                  <h3 className="current-awardee-card-name">
+                    {item.name}
+                  </h3>{" "}
+                  {/* Changed class name */}
+                  <h4 className="current-awardee-card-award-title">
+                    {item.award}
+                  </h4>{" "}
+                  {/* Changed class name */}
+                  <p className="current-awardee-card-description">
+                    {item.description}
+                  </p>{" "}
+                  {/* Changed class name */}
                 </div>
               </Card>
             </div>
