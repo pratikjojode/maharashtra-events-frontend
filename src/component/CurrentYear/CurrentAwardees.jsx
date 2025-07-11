@@ -89,13 +89,7 @@ const CurrentAwardees = () => {
       description:
         "For exceptional contributions to academic leadership and innovation.",
     },
-    {
-      id: 8,
-      name: "Vikrant Sukhtankar",
-      award: "Excellence in Online Learning",
-      imageUrl: Vikrant_Sukhtankar_Awards,
-      description: "Pioneering effective online educational strategies.",
-    },
+   
     {
       id: 9,
       name: "ZEAL College of Engineering",
@@ -110,14 +104,7 @@ const CurrentAwardees = () => {
       imageUrl: Best_team_award_training_and_development,
       description: "For exceptional performance in training and development.",
     },
-    {
-      id: 11,
-      name: "Dr. Ashish Lambat",
-      award: " The research excellence award",
-      imageUrl: Dr_ashish_lambat_award,
-      description:
-        "Recognizing outstanding contributions to academic research.",
-    },
+    
     {
       id: 12,
       name: "Dr. Chetan Chaudhari",
@@ -126,13 +113,7 @@ const CurrentAwardees = () => {
       description:
         "Honoring extensive and impactful service to the institution.",
     },
-    {
-      id: 13,
-      name: "Dr. Nidhi Amit Medhekar",
-      award: " Excellence in educational research award",
-      imageUrl: Dr_Nidhi_Amit_Medhekar_Awards,
-      description: "Recognizing research with significant societal impact.",
-    },
+    
     {
       id: 14,
       name: "Dr. Shittal Watile",
@@ -140,22 +121,8 @@ const CurrentAwardees = () => {
       imageUrl: Dr_Shittal_Watile_Awards,
       description: "quality education and research in the Vidharbha region.",
     },
-    {
-      id: 15,
-      name: "Dr. Sunil Brijmohan Kapoor",
-      award: " Academic visionary award",
-      imageUrl: Dr_Sunil_Brijmohan_Kapoor_award,
-      description:
-        "For visionary contributions to the future of education and academic leadership.",
-    },
-    {
-      id: 16,
-      name: "Dr. Sushil Raut",
-      award: " Young achiever award in Academy and research",
-      imageUrl: Dr_Sushil_Raut,
-      description:
-        "For outstanding achievements in academic research at a young age.",
-    },
+    
+    
     {
       id: 17,
       name: "Dr. Girish Desai",
@@ -188,29 +155,9 @@ const CurrentAwardees = () => {
       description:
         "For innovative approaches in business education and student development.",
     },
-    {
-      id: 21,
-      name: "Ganesh Kakandikar",
-      award: " Award for shaping futures",
-      imageUrl: Ganesh_Kakandikar_Awards,
-      description:
-        "For exceptional contributions to shaping the future of education.",
-    },
-    {
-      id: 22,
-      name: "Ganesh Shirsath",
-      award: " Abroad Educational Visionary award",
-      imageUrl: Ganesh_Shirsath_award,
-      description:
-        "For visionary contributions to international education and student mobility.",
-    },
-    {
-      id: 23,
-      name: "Geniehe.ai",
-      award: " NextGen recruitment innovation award",
-      imageUrl: Geniehe_ai_awards,
-      description: "For pioneering advancements in recruitment technology.",
-    },
+   
+    
+    
     {
       id: 24,
       name: "Harshada Vinod Jadhav",

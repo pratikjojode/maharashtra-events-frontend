@@ -21,7 +21,7 @@ import heroBg17 from "../../assets/DSC07484.jpg";
 import heroBg18 from "../../assets/_DSC0671.jpg";
 
 import jobizzaLogo from "../../assets/jobizza-logo.png";
-import anytimeBarterLogo from "../../assets/anytime-barter-logo.png";
+
 import { FaAward } from "react-icons/fa";
 
 const Hero = () => {
@@ -100,11 +100,7 @@ const Hero = () => {
           <span className="presented-text">Presented by</span>
           <div className="sponsor-logos">
             <img src={jobizzaLogo} alt="Jobizza" className="presenter-logo" />
-            <img
-              src={anytimeBarterLogo}
-              alt="Anytime Barter"
-              className="presenter-logo"
-            />
+           
           </div>
         </div>
 

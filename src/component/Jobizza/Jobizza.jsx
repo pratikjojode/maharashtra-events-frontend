@@ -42,32 +42,7 @@ const Jobizza = () => {
             </div>
           </div>
 
-          {/* Anytime Barter Card */}
-          <div className="gilded-card">
-            <div className="gold-overlay"></div>
-            <div className="medallion-frame">
-              <img
-                src={barterLogo}
-                alt="Anytime Barter"
-                className="medallion-image"
-              />
-            </div>
-            <div className="card-body">
-              <h3 className="card-heading">
-                Anytime Barter
-                <span className="gold-underline"></span>
-              </h3>
-              <p className="card-text">
-                Revolutionizing value exchange through innovative networking
-                solutions, Anytime Barter redefines collaborative economics in
-                education, co-curating prestigious industry events.
-              </p>
-              <a href="https://anytimebarter.com/" className="gold-button">
-                <span className="button-label">Discover Innovation</span>
-                <FaArrowRight className="gold-arrow" />
-              </a>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>

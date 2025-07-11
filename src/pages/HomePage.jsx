@@ -65,7 +65,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       {/* <EventInfo /> */}
-      <TimelineSection />
+      {/* <TimelineSection /> */}
       <CurrentAwardees />
       <PreviousYearJobizzaa />
       <SponsorLogos />
